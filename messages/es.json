@@ -1,0 +1,13 @@
+{
+  "Navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "LocaleSwitcher": {
+    "languages": "Idiomas",
+    "label": "Cambiar idioma",
+    "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
+  }
+}

@@ -3,11 +3,22 @@
     "home": "Home",
     "services": "Services",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "Sheet": {
+      "menu": "Menu",
+      "open": "Open",
+      "close": "Close"
+    }
   },
   "LocaleSwitcher": {
     "languages": "Languages",
     "label": "Change language",
     "locale": "{locale, select, es {Spanish} en {English} other {Unknown}}"
+  },
+  "Home": {
+    "Hero": {
+      "title": "Who are we?",
+      "description": "We are a group of developers ready to make all your ideas possible and update your business."
+    }
   }
 }

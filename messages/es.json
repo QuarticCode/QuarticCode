@@ -20,5 +20,23 @@
       "title": "¿Quiénes somos?",
       "description": "Somos un grupo de desarrolladores listos para hacer posible todas tus ideas y actualizar tu negocio."
     }
+  },
+  "Services": {
+    "s1": {
+      "title": "Desarrollo Web",
+      "description": "Impulse su negocio u empresa con la tecnología con nuestro grupo de desarrolladores y diseñadores a su disposición."
+    },
+    "s2": {
+      "title": "Desarrollo de Videojuegos",
+      "description": "Como iniciativa propia de nuestro grupo de desarrolladores tendremos el desarrollo de videojuegos de todo estilo, diseño y temática."
+    },
+    "s3": {
+      "title": "Desarrollo Móvil",
+      "description": "Con la creación de una APK móvil tendrá la oportunidad de que sus usuarios estén conectados directamente a usted."
+    },
+    "s4": {
+      "title": "Diseño Gráfico",
+      "description": "El momento de la creación y diseño de su logo es crucial, además de la creación de flayers u diseños publicitarios para su marca u slogan. Por lo que la participación de nuestro grupo de diseñadores le será de utilidad."
+    }
   }
 }

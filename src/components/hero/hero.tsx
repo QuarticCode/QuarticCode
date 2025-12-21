@@ -8,7 +8,7 @@ type Props = {
 
 export function Hero({ image, title, description }: Props) {
   return (
-    <section className="flex flex-col justify-center items-center dark:text-white text-black md:p-8 p-2 md:gap-8 gap-2 md:w-2xl w-screen rounded-md bg-linear-to-r from-purple-500/40 via-indigo-500/40 to-blue-500/40">
+    <section className="flex flex-col justify-center items-center dark:text-white text-black md:p-8 p-2 m-4 md:gap-8 gap-2 md:w-2xl w-screen rounded-md bg-linear-to-br from-purple-500/20 via-transparent to-blue-500/20">
       <div className="flex flex-col justify-center items-center">
         <Image
           src={image}

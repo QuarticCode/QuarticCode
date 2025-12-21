@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/src/components/theme/theme-provider";
+import { Footer } from "@/src/components/footer.tsx/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,18 +40,14 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-zinc-50 dark:bg-transparent`}
         suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider>
             <Navbar />
             {children}
+            <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

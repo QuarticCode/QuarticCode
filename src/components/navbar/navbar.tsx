@@ -4,7 +4,7 @@ import { NavbarItems } from "./navbar-items";
 
 export function Navbar() {
   return (
-    <nav className="flex flex-row md:justify-evenly justify-evenly items-center fixed top-0 left-0 right-0 backdrop-blur-2xl">
+    <nav className="flex flex-row md:justify-evenly justify-evenly items-center fixed top-0 left-0 right-0 backdrop-blur-2xl z-50">
       <Image
         src="/logo.svg"
         alt="QuarticCode logo"

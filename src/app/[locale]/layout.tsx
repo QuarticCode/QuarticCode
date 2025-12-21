@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/src/components/theme/theme-provider";
-import { Footer } from "@/src/components/footer.tsx/footer";
+import { Footer } from "@/src/components/footer/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

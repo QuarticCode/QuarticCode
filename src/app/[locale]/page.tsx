@@ -1,4 +1,5 @@
 import { Hero } from "@/src/components/hero/hero";
+import { ProjectContainer } from "@/src/components/projects/project-container";
 import { ServicesList } from "@/src/components/services/services-list";
 import { useTranslations } from "next-intl";
 
@@ -13,6 +14,8 @@ export default function Home() {
       />
 
       <ServicesList />
+
+      <ProjectContainer />
     </div>
   );
 }

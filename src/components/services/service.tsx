@@ -15,7 +15,9 @@ export function Service({ service }: { service: ServiceType }) {
   const t = useTranslations("Services");
 
   return (
-    <Card className={`flex flex-col border-2 border-solid ${service.color} justify-between sm:w-85 w-85 md:m-4 m-0 dark:bg-slate-800 bg-zinc-100 dark:text-white text-black p-4 rounded-xl hover:scale-105 hover:shadow transition-all ease-in-out duration-200 `}>
+    <Card
+      className={`flex flex-col border-2 border-solid ${service.color} justify-between min-h-96 w-85 md:m-4 m-0 dark:text-white text-black p-4 rounded-xl hover:scale-105 hover:shadow transition-all ease-in-out duration-200 `}
+    >
       <CardHeader>
         <Image
           src={service.icon}
@@ -30,11 +32,11 @@ export function Service({ service }: { service: ServiceType }) {
       <CardFooter>
         <Button variant={"outline"}>
           <Link
-          href="/en/Programacion"
-          className="text-[20px] z-30 m-4 p-2 flex rounded-xl"
-        >
-          {t("showMore")}
-        </Link>
+            href="/en/Programacion"
+            className="text-[20px] z-30 m-4 p-2 flex rounded-xl"
+          >
+            {t("showMore")}
+          </Link>
         </Button>
       </CardFooter>
     </Card>

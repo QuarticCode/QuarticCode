@@ -1,32 +1,35 @@
-import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { BeamsUpstream } from "../ui/beams-upstream";
+import { MorphoTextFlip } from "../ui/morphotextflip";
+import { Logo } from "./logo";
 
-type Props = {
-  image: string;
-  title: string;
-  description: string;
-};
-
-export function Hero({ image, title, description }: Props) {
+export function Hero() {
+  const t = useTranslations("Home.Hero");
   return (
-    <section className="flex flex-col justify-center items-center dark:text-white text-black md:p-8 p-2 m-4 md:gap-8 gap-2 md:w-2xl w-screen rounded-md bg-linear-to-br from-purple-500/20 via-transparent to-blue-500/20">
-      <div className="flex flex-col justify-center items-center">
-        <Image
-          src={image}
-          alt="Hero Image"
-          width={280}
-          height={200}
-          className="rounded-md"
-        />
-        <h3 className="font-bold md:text-4xl text-xl">QuarticCode</h3>
-      </div>
-      <div className="flex flex-col gap-4">
-        <h1 className="font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg">
-          {title}
-        </h1>
-        <p className="lg:text-xl md:text-lg sm:text-sm font-light">
-          {description}
-        </p>
-      </div>
-    </section>
+    <div className="relative h-full w-full flex justify-center items-center">
+      <section className="flex md:flex-row flex-col justify-center items-center dark:text-white text-black md:p-8 p-2 m-4 md:gap-8 gap-2 md:w-2xl w-screen">
+        <div className="flex flex-col md:min-w-md w-full gap-8">
+          <Logo image={"/logo.svg"} />
+          <p className="lg:text-xl md:text-lg sm:text-sm font-light">
+            {t("description")}
+          </p>
+        </div>
+        <section className="flex flex-col items-center justify-center h-100 min-w-full  px-4">
+          <h1 className="text-4xl md:text-7xl font-bold text-center  mb-4">
+            {t("morphoText.title")}
+          </h1>
+          <MorphoTextFlip
+            words={[
+              t("morphoText.words.w1"),
+              t("morphoText.words.w2"),
+              t("morphoText.words.w3"),
+            ]}
+            textClassName="text-4xl md:text-7xl text-indigo-600 dark:text-indigo-400 font-bold mt-1"
+            animationType="slideRotate"
+          />
+        </section>
+      </section>
+      <BeamsUpstream className="z-0" />
+    </div>
   );
 }

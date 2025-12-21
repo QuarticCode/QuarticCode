@@ -3,6 +3,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -27,6 +28,7 @@ export function SheetMenu({ child }: Props) {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>{t("menu")}</SheetTitle>
+          <SheetDescription></SheetDescription>
         </SheetHeader>
         {child}
         <SheetFooter>

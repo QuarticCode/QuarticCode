@@ -40,7 +40,7 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-zinc-50 dark:bg-transparent`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-zinc-50 dark:bg-black`}
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

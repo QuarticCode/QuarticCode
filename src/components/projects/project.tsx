@@ -1,25 +1,33 @@
 import { UiProject } from "@/src/lib/types/project";
 import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemTitle,
-} from "../ui/item";
-import { Button } from "../ui/button";
+  BorderGlide,
+  BorderGlideCard,
+  BorderGlideContent,
+  BorderGlideDescription,
+  BorderGlideHeader,
+  BorderGlideTitle,
+} from "../ui/border-glide";
 
 export function Project({ uiProject }: { uiProject: UiProject }) {
   const { project, style } = uiProject;
 
   return (
-    <Item variant="outline" className={`md:w-40 w-32 ${style}`}>
-      <ItemContent>
-        <ItemTitle>{project.title}</ItemTitle>
-        <ItemDescription>{project.description}</ItemDescription>
-      </ItemContent>
-      <ItemActions>
-        <Button variant="outline">Action</Button>
-      </ItemActions>
-    </Item>
+    <BorderGlide
+      autoPlayInterval={6000}
+      borderDuration={5000}
+      borderColor="radial-gradient(ellipse, #fff, transparent)"
+      className={`h-40 w-40 rounded-xl ${style} hover:scale-105 ease-in-out transition-all duration-200`}
+    >
+      <BorderGlideCard>
+        <BorderGlideContent>
+          <BorderGlideHeader>
+            <BorderGlideTitle>{project.title}</BorderGlideTitle>
+            <BorderGlideDescription>
+              {project.description}
+            </BorderGlideDescription>
+          </BorderGlideHeader>
+        </BorderGlideContent>
+      </BorderGlideCard>
+    </BorderGlide>
   );
 }

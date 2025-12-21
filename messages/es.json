@@ -17,11 +17,19 @@
   },
   "Home": {
     "Hero": {
-      "title": "¿Quiénes somos?",
-      "description": "Somos un grupo de desarrolladores listos para hacer posible todas tus ideas y actualizar tu negocio."
+      "description": "Somos un grupo de desarrolladores listos para hacer posible todas tus ideas y actualizar tu negocio.",
+      "morphoText": {
+        "title": "Impulsa tu negocio de forma",
+        "words": {
+          "w1": "inteligente",
+          "w2": "limpia",
+          "w3": "escalable"
+        }
+      }
     }
   },
   "Services": {
+    "title": "Servicios",
     "s1": {
       "title": "Desarrollo Web",
       "description": "Impulse su negocio u empresa con la tecnología con nuestro grupo de desarrolladores y diseñadores a su disposición."
@@ -39,5 +47,27 @@
       "description": "El momento de la creación y diseño de su logo es crucial, además de la creación de flayers u diseños publicitarios para su marca u slogan. Por lo que la participación de nuestro grupo de diseñadores le será de utilidad."
     },
     "showMore": "Mostrar más →"
+  },
+  "Projects": {
+    "container": {
+      "title": "¿Projectos Creados?",
+      "description": "En nuestro portafolio de proyectos creados, podrá revisar el tangible resultado de años de experiencia trabajando como un equipo cohesionado de programadores. No solo construimos software; entregamos productos robustos, escalables y de alta calidad que han resuelto problemas reales para nuestros clientes."
+    },
+    "p1": {
+      "title": "PyDownVideo",
+      "description": ""
+    },
+    "p2": {
+      "title": "PyTranslator",
+      "description": ""
+    },
+    "p3": {
+      "title": "FiTargetTool",
+      "description": ""
+    },
+    "sm": {
+      "title": "Más proyectos",
+      "description": "Si desea ver más proyectos puede verlos a continuación."
+    }
   }
 }

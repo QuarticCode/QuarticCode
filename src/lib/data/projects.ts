@@ -8,7 +8,7 @@ export const projects: UiProject[] = [
       description: "Aplicacion para descargar videos de youtube",
       link: "aqui",
     },
-    style: "dark:bg-blue-900 bg-blue-100",
+    style: "bg-blue-900",
   },
   {
     project: {
@@ -17,7 +17,7 @@ export const projects: UiProject[] = [
       description: "Aplicacion para descargar videos de youtube",
       link: "aqui",
     },
-    style: "dark:bg-purple-900 bg-purple-100",
+    style: "bg-purple-900",
   },
   {
     project: {
@@ -26,6 +26,6 @@ export const projects: UiProject[] = [
       description: "Aplicacion para descargar videos de youtube",
       link: "aqui",
     },
-    style: "dark:bg-green-900 bg-green-100",
+    style: "bg-green-900",
   },
 ];

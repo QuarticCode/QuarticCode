@@ -16,7 +16,7 @@ export function Service({ service }: { service: ServiceType }) {
 
   return (
     <Card
-      className={`flex flex-col border-2 border-solid ${service.color} justify-between min-h-96 w-85 md:m-4 m-0 dark:text-white text-black p-4 rounded-xl hover:scale-105 hover:shadow transition-all ease-in-out duration-200 `}
+      className={`flex flex-col border-2 border-solid ${service.color} justify-between min-h-96 max-h-96 w-85 md:m-4 m-0 dark:text-white text-black p-4 rounded-xl hover:scale-105 hover:shadow transition-all ease-in-out duration-200 `}
     >
       <CardHeader>
         <Image

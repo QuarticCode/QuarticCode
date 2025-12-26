@@ -10,6 +10,12 @@
       "close": "Close"
     }
   },
+  "ThemeItems": {
+    "label": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "LocaleSwitcher": {
     "languages": "Languages",
     "label": "Change language",
@@ -69,5 +75,9 @@
       "title": "More projects",
       "description": "If you want to see more projects, you can view them below."
     }
+  },
+  "MockUp": {
+    "b1": "Try it and see",
+    "b2": "your idea."
   }
 }

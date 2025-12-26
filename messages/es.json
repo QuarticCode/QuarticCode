@@ -10,6 +10,12 @@
       "close": "Cerrar"
     }
   },
+  "ThemeItems": {
+    "label": "Escoja un tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
   "LocaleSwitcher": {
     "languages": "Idiomas",
     "label": "Cambiar idioma",
@@ -69,5 +75,9 @@
       "title": "Más proyectos",
       "description": "Si desea ver más proyectos puede verlos a continuación."
     }
+  },
+  "MockUp": {
+    "b1": "Prueba y mira",
+    "b2": "tu idea."
   }
 }

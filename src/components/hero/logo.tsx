@@ -10,7 +10,7 @@ export function Logo({ image }: { image: string }) {
         height={200}
         className="rounded-md"
       />
-      <h3 className="font-bold md:text-4xl text-xl">QuarticCode</h3>
+      <h3 className="font-bold md:text-6xl text-xl">QuarticCode</h3>
     </div>
   );
 }

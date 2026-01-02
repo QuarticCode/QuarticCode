@@ -7,9 +7,11 @@ import {
   BorderGlideHeader,
   BorderGlideTitle,
 } from "../ui/border-glide";
+import { useTranslations } from "next-intl";
 
 export function Project({ uiProject }: { uiProject: UiProject }) {
   const { project, style } = uiProject;
+  const t = useTranslations("Projects");
 
   return (
     <BorderGlide
@@ -21,9 +23,9 @@ export function Project({ uiProject }: { uiProject: UiProject }) {
       <BorderGlideCard>
         <BorderGlideContent>
           <BorderGlideHeader>
-            <BorderGlideTitle>{project.title}</BorderGlideTitle>
+            <BorderGlideTitle>{t(project.title)}</BorderGlideTitle>
             <BorderGlideDescription>
-              {project.description}
+              {t(project.description)}
             </BorderGlideDescription>
           </BorderGlideHeader>
         </BorderGlideContent>

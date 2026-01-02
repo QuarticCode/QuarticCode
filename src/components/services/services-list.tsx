@@ -9,7 +9,7 @@ export function ServicesList() {
       <h1 className="text-4xl md:text-7xl font-bold text-center  mb-4">
         {t("title")}
       </h1>
-      <div className="flex flex-row flex-wrap gap-2 max-w-4xl items-center justify-center">
+      <div className="flex flex-row flex-wrap lg:gap-4 gap-2 max-w-4xl items-center justify-center">
         {services.map((s) => {
           return <Service service={s} key={s.title} />;
         })}

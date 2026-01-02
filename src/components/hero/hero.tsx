@@ -7,14 +7,14 @@ export function Hero() {
   const t = useTranslations("Home.Hero");
   return (
     <div className="relative h-full w-full flex justify-center items-center">
-      <section className="flex md:flex-row flex-col justify-center items-center dark:text-white text-black md:p-8 p-2 m-4 md:gap-8 gap-2 md:w-2xl w-screen">
-        <div className="flex flex-col md:min-w-md w-full gap-8">
+      <section className="flex lg:flex-row flex-col justify-evenly items-center dark:text-white text-black md:p-8 p-2 m-4 md:w-full w-screen md:gap-0 gap-16">
+        <div className="flex flex-col md:max-w-md w-full gap-8">
           <Logo image={"/logo.svg"} />
           <p className="lg:text-xl md:text-lg sm:text-sm font-light">
             {t("description")}
           </p>
         </div>
-        <section className="flex flex-col items-center justify-center h-100 min-w-full  px-4">
+        <section className="flex flex-col items-center justify-center md:max-w-md w-full gap-8">
           <h1 className="text-4xl md:text-7xl font-bold text-center  mb-4">
             {t("morphoText.title")}
           </h1>

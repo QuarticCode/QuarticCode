@@ -7,18 +7,6 @@ export function ProjectsList() {
       {projects.map((p) => {
         return <Project uiProject={p} key={p.project.title} />;
       })}
-      <Project
-        uiProject={{
-          project: {
-            title: "Mas proyectos",
-            description:
-              "Si desea ver mas proyectos puede verlos a continuacion.",
-            link: "#",
-            image: "/logo.svg",
-          },
-          style: "bg-yellow-900",
-        }}
-      />
     </div>
   );
 }

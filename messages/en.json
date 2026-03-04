@@ -79,5 +79,44 @@
   "MockUp": {
     "b1": "Try it and see",
     "b2": "your idea."
+  },
+  "Footer": {
+    "info": "We are a group of developers ready to make all your ideas possible and update your business.",
+    "columns": {
+      "c1": {
+        "title": "Contact",
+        "items": {
+          "i1": {
+            "info": "Direct support and inquiries"
+          },
+          "i2": {
+            "info": "Join our community"
+          }
+        }
+      },
+      "c2": {
+        "title": "Development",
+        "items": {
+          "i1": {
+            "info": "Cuenta de Github"
+          },
+          "i2": {
+            "info": "Blog"
+          }
+        }
+      },
+      "c3": {
+        "title": "Legal",
+        "items": {
+          "i1": {
+            "info": "Privacy Policy"
+          },
+          "i2": {
+            "info": "Terms of Service"
+          }
+        }
+      }
+    },
+    "legal": "© 2026 QuarticCode. All rights reserved."
   }
 }

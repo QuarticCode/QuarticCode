@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 export function ServicesList() {
   const t = useTranslations("Services");
   return (
-    <section className="flex flex-col justify-center items-center w-full mt-16">
+    <section className="flex flex-col justify-center items-center w-full mt-16" id="services">
       <h1 className="text-4xl md:text-7xl font-bold text-center  mb-4">
         {t("title")}
       </h1>

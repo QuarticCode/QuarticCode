@@ -3,7 +3,13 @@ import ContactForm from "./contact-form";
 
 export const Contact = () => {
   return (
-    <section className="py-8 sm:py-16 lg:py-24">
+    <section
+      className="py-8 sm:py-16 lg:py-24"
+      data-aos={"fade-up"}
+      data-aos-delay={"10"}
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 space-y-4 sm:mb-16 lg:mb-24">
           <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
@@ -14,7 +20,7 @@ export const Contact = () => {
             or need help with something, we&apos;re here for you.
           </p>
         </div>
-        <section className='grid gap-6 sm:grid-cols-2 '>
+        <section className="grid gap-6 sm:grid-cols-2 ">
           <div className="h-64 w-64 relative top-20 justify-self-center">
             <Image
               width={80}

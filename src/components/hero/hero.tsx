@@ -6,7 +6,13 @@ import { Logo } from "./logo";
 export function Hero() {
   const t = useTranslations("Home.Hero");
   return (
-    <div className="relative h-full w-full flex justify-center items-center">
+    <div
+      className="relative h-full w-full flex justify-center items-center"
+      data-aos={"fade-up"}
+      data-aos-delay={"10"}
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <section className="flex lg:flex-row flex-col justify-evenly items-center dark:text-white text-black md:p-8 p-2 m-4 md:w-full w-screen md:gap-0 gap-16">
         <div className="flex flex-col md:max-w-md w-full gap-8">
           <Logo image={"/logo.svg"} />

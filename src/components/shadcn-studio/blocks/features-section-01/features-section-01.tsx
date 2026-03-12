@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/src/components/ui/card";
 
 import { cn } from "@/src/lib/utils";
 import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/navigation";
 
 type Features = {
   icon: ComponentType;
@@ -36,9 +37,9 @@ const Features = ({ featuresList }: { featuresList: Features }) => {
             {t("title")}
           </h2>
           <p className="text-muted-foreground text-xl">
-            Explore key features designed to enhance your shopping experience
-            with intuitive navigation, robust security, and seamless
-            functionality.
+            Explora nuestros servicios y podras Explore key features designed to
+            enhance your shopping experience with intuitive navigation, robust
+            security, and seamless functionality.
           </p>
           <Button
             variant="outline"
@@ -46,10 +47,10 @@ const Features = ({ featuresList }: { featuresList: Features }) => {
             size="lg"
             asChild
           >
-            <a href="#">
+            <Link href="/services">
               See all services
               <ArrowRightIcon />
-            </a>
+            </Link>
           </Button>
         </div>
 

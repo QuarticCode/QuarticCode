@@ -26,8 +26,6 @@ export function ContactDialog({ children }: ContactDialogProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl">Contáctanos</DialogTitle>
           <DialogDescription>
-            Completa el formulario below y nos pondremos en contacto contigo lo
-            antes posible.
           </DialogDescription>
         </DialogHeader>
         <div className="py-4">

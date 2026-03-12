@@ -70,7 +70,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="md:min-h-screen h-120 flex items-center justify-center p-4">
+    <div className="h-120 flex items-center justify-center p-4">
       <Card className="w-full max-w-lg shadow-lg">
         <CardHeader className="text-center space-y-2">
           <CardTitle className="md:text-2xl text-xl font-bold text-slate-800 dark:text-slate-300">

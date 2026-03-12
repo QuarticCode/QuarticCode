@@ -36,6 +36,7 @@
   },
   "Services": {
     "title": "Services",
+    "description": "Explore our services and you will find everything from web and mobile development to cloud infrastructure and high-impact design. Adapting to your digital product.",
     "s1": {
       "title": "Web Develop",
       "description": "Boost your business or company with technology with our group of developers and designers at your disposal."
@@ -75,6 +76,9 @@
       "title": "More projects",
       "description": "If you want to see more projects, you can view them below."
     }
+  },
+  "Contact": {
+    "title": "Conect With Us"
   },
   "MockUp": {
     "b1": "Try it and see",

@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import LocaleSwitcher from "../locale-switcher/locale-switcher";
 import ThemeSelector from "../theme/theme-selector";
 import { Button } from "../ui/button";
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
 
 export function NavbarItems() {
   const t = useTranslations("Navbar");
@@ -11,7 +11,7 @@ export function NavbarItems() {
       <Link href={"/"}>
         <Button variant="ghost">{t("home")}</Button>
       </Link>
-      <Link href={"/#services"}>
+      <Link href={"/services"}>
         <Button variant="ghost">{t("services")}</Button>
       </Link>
       <Link href={"/projects"}>

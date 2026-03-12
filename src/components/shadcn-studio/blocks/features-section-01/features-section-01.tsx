@@ -36,11 +36,7 @@ const Features = ({ featuresList }: { featuresList: Features }) => {
           <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
             {t("title")}
           </h2>
-          <p className="text-muted-foreground text-xl">
-            Explora nuestros servicios y podras Explore key features designed to
-            enhance your shopping experience with intuitive navigation, robust
-            security, and seamless functionality.
-          </p>
+          <p className="text-muted-foreground text-xl">{t("description")}</p>
           <Button
             variant="outline"
             className="rounded-lg text-base shadow-none has-[>svg]:px-6"

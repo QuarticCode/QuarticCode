@@ -36,6 +36,7 @@
   },
   "Services": {
     "title": "Servicios",
+    "description": "Explore nuestros servicios y encontrará de todo, desde desarrollo web y móvil hasta infraestructura en la nube y diseño de alto impacto. Adaptándonos a su producto digital.",
     "s1": {
       "title": "Desarrollo Web",
       "description": "Impulse su negocio u empresa con la tecnología con nuestro grupo de desarrolladores y diseñadores a su disposición."
@@ -75,6 +76,9 @@
       "title": "Más proyectos",
       "description": "Si desea ver más proyectos puede verlos a continuación."
     }
+  },
+  "Contact": {
+    "title": "Conecta con nosotros"
   },
   "MockUp": {
     "b1": "Prueba y mira",

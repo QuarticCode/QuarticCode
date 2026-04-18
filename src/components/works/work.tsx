@@ -7,18 +7,30 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import Image from "next/image";
 
 type Props = {
   title: string;
   info: string;
   link: string;
+  img: string;
 };
 
-export default function Work({ title, info, link }: Props) {
+export default function Work({ title, info, link, img }: Props) {
   return (
-    <Card className="flex flex-col gap-4 w-140 border-2 border-slate-800 bg-linear-to-br from-blue-500/20 via-blue-500/50 to-indigo-500/40">
+    <Card className="flex flex-col gap-4 md:w-140 w-96 border-2 border-slate-800 relative overflow-hidden z-1">
+      <Image
+        src={img}
+        width={80}
+        height={80}
+        alt={title}
+        className="absolute w-full h-64 blur-3xl -z-1"
+      />
       <CardHeader>
-        <CardTitle className="text-4xl">{title}</CardTitle>
+        <CardTitle className="flex flex-row justify-evenly items-center">
+          <Image src={img} width={80} height={80} alt={title} />
+          <h1 className="text-4xl">{title}</h1>
+        </CardTitle>
         <CardDescription className="text-lg">{info}</CardDescription>
         <CardFooter>
           <Link href={link}>

@@ -1,11 +1,10 @@
-export type Project = {
+export type TProject = {
   title: string;
-  description: string;
+  info: string;
   link: string;
-  image: string;
 };
 
-export type UiProject = {
-  project: Project;
+export type TUiProject = {
+  project: TProject;
   style: string;
 };

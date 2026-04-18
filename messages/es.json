@@ -58,7 +58,8 @@
   "Projects": {
     "container": {
       "title": "¿Projectos Creados?",
-      "description": "En nuestro portafolio de proyectos creados, podrá revisar el tangible resultado de años de experiencia trabajando como un equipo cohesionado de programadores. No solo construimos software; entregamos productos robustos, escalables y de alta calidad que han resuelto problemas reales para nuestros clientes."
+      "description": "En nuestro portafolio de proyectos creados, podrá revisar el tangible resultado de años de experiencia trabajando como un equipo cohesionado de programadores. No solo construimos software; entregamos productos robustos, escalables y de alta calidad que han resuelto problemas reales para nuestros clientes.",
+      "link": "Ver proyectos"
     },
     "p1": {
       "title": "PyDownVideo",
@@ -83,6 +84,11 @@
   "MockUp": {
     "b1": "Prueba y mira",
     "b2": "tu idea."
+  },
+  "Works": {
+    "cta-title": "¿Quieres ver trabajos ya terminados?",
+    "cta-description": "Puedes revisar la siguiente sección y encontrarás trabajos previos.",
+    "cta-link": "Ir a la sección"
   },
   "Footer": {
     "info": "Nuestro grupo de desarrolladores estan listos para hacer todas sus ideas posibles y impulsar su negocio.",

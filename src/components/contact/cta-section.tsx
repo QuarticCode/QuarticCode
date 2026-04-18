@@ -5,18 +5,15 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { ContactDialog } from "./contact-dialog";
-import Image from "next/image";
+import Background from "../icons/background";
 
 export function CtaSection() {
   return (
     <section className="py-20 relative bg-secondary/50 border-y border-border">
-      <Image
+      <Background
         className="top-0 left-0 w-full h-full blur-3xl absolute -z-1"
-        src={"/background.svg"}
-        alt="background"
-        fetchPriority="high"
-        width={"0"}
-        height={"0"}
+        colorLeft="#4333d8"
+        colorRight="#3245FF"
       />
       <div className="container mx-auto px-4 text-center">
         <motion.div

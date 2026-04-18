@@ -58,7 +58,8 @@
   "Projects": {
     "container": {
       "title": "Projects created?",
-      "description": "In our portfolio of completed projects, you can see the tangible result of years of experience working as a cohesive team of programmers. We don't just build software; we deliver robust, scalable, high-quality products that have solved real problems for our clients."
+      "description": "In our portfolio of completed projects, you can see the tangible result of years of experience working as a cohesive team of programmers. We don't just build software; we deliver robust, scalable, high-quality products that have solved real problems for our clients.",
+      "link": "See projects"
     },
     "p1": {
       "title": "PyDownVideo",
@@ -83,6 +84,11 @@
   "MockUp": {
     "b1": "Try it and see",
     "b2": "your idea."
+  },
+  "Works": {
+    "cta-title": "Do you want to see already finished jobs?",
+    "cta-description": "You can review the following section and you will find previous work.",
+    "cta-link": "Go to the section"
   },
   "Footer": {
     "info": "We are a group of developers ready to make all your ideas possible and update your business.",

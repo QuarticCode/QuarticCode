@@ -1,35 +1,28 @@
-import { UiProject } from "@/src/lib/types/project";
+import Link from "next/link";
+import { Button } from "../ui/button";
 import {
-  BorderGlide,
-  BorderGlideCard,
-  BorderGlideContent,
-  BorderGlideDescription,
-  BorderGlideHeader,
-  BorderGlideTitle,
-} from "../ui/border-glide";
-import { useTranslations } from "next-intl";
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+import { TProject } from "@/src/lib/types/project";
 
-export function Project({ uiProject }: { uiProject: UiProject }) {
-  const { project, style } = uiProject;
-  const t = useTranslations("Projects");
-
+export default function Project({ title, info, link }: TProject) {
   return (
-    <BorderGlide
-      autoPlayInterval={6000}
-      borderDuration={5000}
-      borderColor="radial-gradient(ellipse, #fff, transparent)"
-      className={`h-40 w-40 rounded-xl ${style} hover:scale-105 ease-in-out transition-all duration-200`}
-    >
-      <BorderGlideCard>
-        <BorderGlideContent>
-          <BorderGlideHeader>
-            <BorderGlideTitle>{t(project.title)}</BorderGlideTitle>
-            <BorderGlideDescription>
-              {t(project.description)}
-            </BorderGlideDescription>
-          </BorderGlideHeader>
-        </BorderGlideContent>
-      </BorderGlideCard>
-    </BorderGlide>
+    <Card className="flex flex-col gap-4 w-140 border-2 border-slate-800 bg-linear-to-br from-blue-500/20 via-blue-500/50 to-indigo-500/40">
+      <CardHeader>
+        <CardTitle className="text-4xl">{title}</CardTitle>
+        <CardDescription className="text-lg">{info}</CardDescription>
+        <CardFooter>
+          <Link href={link}>
+            <Button variant={"link"} className="w-16">
+              Visitar
+            </Button>
+          </Link>
+        </CardFooter>
+      </CardHeader>
+    </Card>
   );
 }

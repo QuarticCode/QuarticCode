@@ -14,6 +14,9 @@ export function NavbarItems() {
       <Link href={"/services"}>
         <Button variant="ghost">{t("services")}</Button>
       </Link>
+      <Link href={"/works"}>
+        <Button variant="ghost">{t("work")}</Button>
+      </Link>
       <Link href={"/projects"}>
         <Button variant="ghost">{t("project")}</Button>
       </Link>

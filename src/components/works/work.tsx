@@ -1,13 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "../ui/button";
 import {
   Card,
+  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 type Props = {
   title: string;
@@ -18,28 +19,36 @@ type Props = {
 
 export default function Work({ title, info, link, img }: Props) {
   return (
-    <Card className="flex flex-col gap-4 md:w-140 w-96 border-2 border-slate-800 relative overflow-hidden z-1">
-      <Image
-        src={img}
-        width={80}
-        height={80}
-        alt={title}
-        className="absolute w-full h-64 blur-3xl -z-1"
-      />
+    <Card className="group overflow-hidden border border-border bg-background/60 backdrop-blur transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      {/* Imagen preview */}
+      <div className="relative w-full h-48 overflow-hidden">
+        <Image
+          src={img}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+
+        {/* Overlay sutil */}
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent opacity-60" />
+      </div>
+
       <CardHeader>
-        <CardTitle className="flex flex-row justify-evenly items-center">
-          <Image src={img} width={80} height={80} alt={title} />
-          <h1 className="text-4xl">{title}</h1>
-        </CardTitle>
-        <CardDescription className="text-lg">{info}</CardDescription>
-        <CardFooter>
-          <Link href={link}>
-            <Button variant={"link"} className="w-16">
-              Visitar
-            </Button>
-          </Link>
-        </CardFooter>
+        <CardTitle className="text-lg font-semibold">{title}</CardTitle>
+
+        <CardDescription className="text-sm line-clamp-3">
+          {info}
+        </CardDescription>
       </CardHeader>
+
+      <CardContent className="flex justify-between items-center">
+        <Link href={link} target="_blank">
+          <Button className="flex items-center gap-2">
+            Ver trabajo
+            <ArrowUpRight size={16} />
+          </Button>
+        </Link>
+      </CardContent>
     </Card>
   );
 }

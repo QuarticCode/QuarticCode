@@ -2,27 +2,35 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import {
   Card,
+  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
 import { TProject } from "@/src/lib/types/project";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Project({ title, info, link }: TProject) {
   return (
-    <Card className="flex flex-col gap-4 w-140 border-2 border-slate-800 bg-linear-to-br from-blue-500/20 via-blue-500/50 to-indigo-500/40">
+    <Card className="group relative overflow-hidden border border-border bg-background/60 backdrop-blur transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      {/* Gradient overlay sutil */}
+      <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
       <CardHeader>
-        <CardTitle className="text-4xl">{title}</CardTitle>
-        <CardDescription className="text-lg">{info}</CardDescription>
-        <CardFooter>
-          <Link href={link}>
-            <Button variant={"link"} className="w-16">
-              Visitar
-            </Button>
-          </Link>
-        </CardFooter>
+        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+        <CardDescription className="text-sm line-clamp-3">
+          {info}
+        </CardDescription>
       </CardHeader>
+
+      <CardContent className="flex justify-between items-center">
+        <Link href={link}>
+          <Button className="flex items-center gap-2">
+            Ver proyecto
+            <ArrowUpRight size={16} />
+          </Button>
+        </Link>
+      </CardContent>
     </Card>
   );
 }

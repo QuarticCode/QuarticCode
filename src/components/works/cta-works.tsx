@@ -15,8 +15,9 @@ export function CtaWorks() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
+      className="m lg:w-4xl md:w-2xl w-screen"
     >
-      <section className="my-16 py-20 md:px-32 px-0 relative bg-secondary/50 border-y border-border rounded-2xl z-1 overflow-hidden   ">
+      <section className="y-16 mx-4 px-4 py-20 relative bg-secondary/50 border-y border-border rounded-2xl z-1 overflow-hidden   ">
         <canvas className="particle h-80 w-80 rounded-full bg-purple-500/50 absolute blur-2xl -translate-x-full -z-1 left-20 top-0" />
         <canvas className="particle h-80 w-80 rounded-full bg-blue-500/50 absolute blur-2xl translate-x-full -z-1 right-20 end-0" />
         <div className="container mx-auto px-4 text-center">

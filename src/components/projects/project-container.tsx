@@ -23,7 +23,7 @@ export function ProjectContainer() {
       transition={{ duration: 0.5 }}
     >
       <section
-        className="flex lg:flex-row flex-col lg:w-4xl w-full gap-8 my-16 px-4"
+        className="flex lg:flex-row flex-col lg:w-4xl md:w-2xl w-screen gap-8 my-16 px-4"
         id="projects"
       >
         <Card className="flex flex-col gap-4 border-2 w-full bg-linear-to-br from-purple-500/20 via-purple-500/40 to-blue-500/30">

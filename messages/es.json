@@ -24,7 +24,8 @@
   },
   "Home": {
     "Hero": {
-      "description": "Somos un grupo de desarrolladores listos para hacer posible todas tus ideas y actualizar tu negocio.",
+      "title": "Desarrollo web a medida",
+      "subtitle": "Transformamos tus ideas en productos digitales funcionales, rápidos y atractivos.",
       "morphoText": {
         "title": "Impulsa tu negocio de forma",
         "words": {
@@ -32,7 +33,9 @@
           "w2": "limpia",
           "w3": "escalable"
         }
-      }
+      },
+      "cta_primary": "Solicitar presupuesto",
+      "cta_secondary": "Ver proyectos"
     }
   },
   "Services": {

@@ -24,15 +24,18 @@
   },
   "Home": {
     "Hero": {
-      "description": "We are a group of developers ready to make all your ideas possible and update your business.",
+      "title": "Custom Web Development",
+      "subtitle": "We turn your ideas into functional, fast, and engaging digital products.",
       "morphoText": {
-        "title": "Boost your business ",
+        "title": "Grow your business in a",
         "words": {
-          "w1": "intelligent",
+          "w1": "smart",
           "w2": "clean",
           "w3": "scalable"
         }
-      }
+      },
+      "cta_primary": "Request a Quote",
+      "cta_secondary": "View Projects"
     }
   },
   "Services": {

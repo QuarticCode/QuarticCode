@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import { BeamsUpstream } from "../ui/beams-upstream";
 import { MorphoTextFlip } from "../ui/morphotextflip";
-import { Logo } from "./logo";
+import Image from "next/image";
+// import { Logo } from "./logo";
 
 export function Hero() {
   const t = useTranslations("Home.Hero");
@@ -15,7 +16,23 @@ export function Hero() {
     >
       <section className="flex lg:flex-row flex-col justify-evenly items-center dark:text-white text-black md:p-8 p-2 m-4 md:w-full w-screen md:gap-0 gap-16">
         <div className="flex flex-col md:max-w-md w-full gap-8">
-          <Logo image={"/logo.svg"} />
+          <div className="h-64 w-64 relative md:top-20 sm:top-10 top-0 justify-self-center">
+            <Image
+              width={80}
+              height={80}
+              className="w-64 h-64 z-1"
+              src={"/logo.svg"}
+              alt="Contact Logo"
+            />
+            <Image
+              width={80}
+              height={80}
+              className="w-64 h-64 absolute z-0 blur-3xl top-0"
+              src={"/logo.svg"}
+              alt="Contact Logo"
+            />
+          </div>
+          {/* <Logo image={"/logo.svg"} /> */}
           <p className="lg:text-xl md:text-lg sm:text-sm font-light">
             {t("description")}
           </p>

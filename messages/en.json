@@ -54,7 +54,7 @@
       "title": "Graphic Desing",
       "description": "The moment of creation and design of your logo is crucial, in addition to the creation of flayers or advertising designs for your brand or slogan. Therefore, the participation of our group of designers will be useful."
     },
-    "showMore": "Show more →"
+    "showMore": "Show more"
   },
   "Projects": {
     "container": {
@@ -80,7 +80,27 @@
     }
   },
   "Contact": {
-    "title": "Conect With Us"
+    "title": "Contact Us",
+    "form": {
+      "title": "Request a Quote",
+      "description": "Select the services you need and we will contact you via WhatsApp.",
+      "fullname": "Full Name",
+      "email": "Email Address",
+      "info": "Project Information / Details",
+      "info_placeholder": "Briefly tell us about your project...",
+      "opcional": "Optional",
+      "send": "Send via WhatsApp"
+    },
+    "toast": {
+      "success": "Opening WhatsApp to send your message.",
+      "error": "Please enter your full name"
+    },
+    "messages": {
+      "title": "*Hello, I would like to request a quote.*",
+      "info_null": "📝 *Additional Information:* Not specified.",
+      "info": "📝 *Additional Information:*",
+      "redirect": "Redirecting..."
+    }
   },
   "MockUp": {
     "b1": "Try it and see",

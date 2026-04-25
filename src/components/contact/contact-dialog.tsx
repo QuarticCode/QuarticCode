@@ -11,12 +11,14 @@ import {
 } from "../ui/dialog";
 import { useState } from "react";
 import ContactForm from "./contact-form";
+import { useTranslations } from "next-intl";
 
 interface ContactDialogProps {
   children: React.ReactNode; // Será el botón que le pasamos desde afuera
 }
 
 export function ContactDialog({ children }: ContactDialogProps) {
+  const t = useTranslations("Contact")
   const [open, setOpen] = useState(false);
 
   return (
@@ -24,7 +26,7 @@ export function ContactDialog({ children }: ContactDialogProps) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-125">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Contáctanos</DialogTitle>
+          <DialogTitle className="text-2xl">{t("title")}</DialogTitle>
           <DialogDescription>
           </DialogDescription>
         </DialogHeader>

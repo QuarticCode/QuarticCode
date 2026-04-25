@@ -14,6 +14,7 @@ import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,6 +22,7 @@ export default function ContactForm() {
     email: "",
     info: "",
   });
+  const t = useTranslations("Contact");
 
   const adminPhone: string = "+5355153703";
 
@@ -37,24 +39,24 @@ export default function ContactForm() {
     // Validaciones
     if (!formData.fullName.trim()) {
       toast.error("Error", {
-        description: "Por favor, ingresa tu nombre completo.",
+        description: t("toast.error"),
         className: "bg-slate-900",
       });
       return;
     }
 
     // Construir el mensaje
-    let message = `*Hola, me gustaría solicitar una cotización.*\n\n`;
-    message += `👤 *Nombre:* ${formData.fullName}\n`;
+    let message = `${t("messages.title")}\n\n`;
+    message += `👤 *${t("form.fullname")}:* ${formData.fullName}\n`;
 
     if (formData.email) {
-      message += `📧 *Correo:* ${formData.email}\n`;
+      message += `📧 *${t("form.email")}:* ${formData.email}\n`;
     }
 
     if (formData.info) {
-      message += `📝 *Información Adicional:*\n${formData.info}`;
+      message += `📝 ${t("messages.info")} \n${formData.info}`;
     } else {
-      message += `📝 *Información Adicional:* No especificada.`;
+      message += `📝 ${t("messages.info_null")}`;
     }
 
     // Codificar URL
@@ -64,21 +66,20 @@ export default function ContactForm() {
     // Abrir en nueva pestaña
     window.open(whatsappUrl, "_blank");
 
-    toast.success("Redirigiendo...", {
-      description: "Abriendo WhatsApp para enviar tu mensaje.",
+    toast.success(t("messages.redirect"), {
+      description: t("toast.success"),
     });
   };
 
   return (
-    <div className="h-120 flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-4 md:w-150 w-full">
       <Card className="w-full max-w-lg shadow-lg">
         <CardHeader className="text-center space-y-2">
           <CardTitle className="md:text-2xl text-xl font-bold text-slate-800 dark:text-slate-300">
-            Solicitar Presupuesto
+            {t("form.title")}
           </CardTitle>
           <CardDescription className="text-md text-slate-500 dark:text-white">
-            Selecciona los servicios que necesitas y te contactaremos vía
-            WhatsApp.
+            {t("form.description")}
           </CardDescription>
         </CardHeader>
 
@@ -101,9 +102,9 @@ export default function ContactForm() {
           {/* Correo Electrónico */}
           <div className="space-y-2">
             <Label htmlFor="email">
-              Correo Electrónico{" "}
+              {t("form.email")}{" "}
               <span className="text-slate-400 text-sm font-normal">
-                (Opcional)
+                ({t("form.opcional")})
               </span>
             </Label>
             <Input
@@ -119,11 +120,11 @@ export default function ContactForm() {
 
           {/* Información Adicional */}
           <div className="space-y-2">
-            <Label htmlFor="info">Información del Proyecto / Detalles</Label>
+            <Label htmlFor="info">{t("form.info")}</Label>
             <Textarea
               id="info"
               name="info"
-              placeholder="Cuéntanos brevemente sobre tu proyecto..."
+              placeholder={t("form.info_placeholder")}
               value={formData.info}
               onChange={handleChange}
               className="md:min-h-25 min-h-16 focus-visible:ring-green-500 resize-none"
@@ -136,7 +137,7 @@ export default function ContactForm() {
             className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold h-12 text-lg"
           >
             <MessageCircle className="mr-2 h-5 w-5" />
-            Enviar por WhatsApp
+            {t("form.send")}
           </Button>
         </CardContent>
       </Card>

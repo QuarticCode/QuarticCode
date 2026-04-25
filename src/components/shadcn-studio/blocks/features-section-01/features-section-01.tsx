@@ -44,7 +44,7 @@ const Features = ({ featuresList }: { featuresList: Features }) => {
             asChild
           >
             <Link href="/services">
-              See all services
+              {t("showMore")}
               <ArrowRightIcon />
             </Link>
           </Button>

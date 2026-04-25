@@ -54,7 +54,7 @@
       "title": "Diseño Gráfico",
       "description": "El momento de la creación y diseño de su logo es crucial, además de la creación de flayers u diseños publicitarios para su marca u slogan. Por lo que la participación de nuestro grupo de diseñadores le será de utilidad."
     },
-    "showMore": "Mostrar más →"
+    "showMore": "Mostrar más"
   },
   "Projects": {
     "container": {
@@ -80,7 +80,27 @@
     }
   },
   "Contact": {
-    "title": "Conecta con nosotros"
+    "title": "Contáctanos",
+    "form": {
+      "title": "Solicitar Presupuesto",
+      "description": "Selecciona los servicios que necesitas y te contactaremos vía WhatsApp.",
+      "fullname": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "info": "Información del Proyecto / Detalles",
+      "info_placeholder": "Cuéntanos brevemente sobre tu proyecto...",
+      "opcional": "Opcional",
+      "send": "Enviar por WhatsApp"
+    },
+    "toast": {
+      "success": "Abriendo WhatsApp para enviar tu mensaje.",
+      "error": "Por favor, ingresa tu nombre completo."
+    },
+    "messages": {
+      "title": "*Hola, me gustaría solicitar una cotización.*",
+      "info_null": "📝 *Información Adicional:* No especificada.",
+      "info": "📝 *Información Adicional:*",
+      "redirect": "Redirigiendo..."
+    }
   },
   "MockUp": {
     "b1": "Prueba y mira",

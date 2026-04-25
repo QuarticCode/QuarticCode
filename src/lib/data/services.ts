@@ -5,9 +5,8 @@ import { Monitor, Cloud, Smartphone, PenTool } from "lucide-react";
 export const servicesData: Service[] = [
   {
     id: "web",
-    title: "Desarrollo Web",
-    description:
-      "Creamos experiencias digitales a medida: blogs, tiendas y webs corporativas.",
+    title: "cards.1.title",
+    description: "cards.1.description",
     icon: Monitor,
     tags: [
       "Páginas Personales",
@@ -27,9 +26,8 @@ export const servicesData: Service[] = [
   },
   {
     id: "cloud",
-    title: "Servicios en la Nube",
-    description:
-      "Infraestructura escalable: APIs, BDs y monitoreo remoto o local.",
+    title: "cards.2.title",
+    description: "cards.2.description",
     icon: Cloud,
     tags: ["APIs", "Base de Datos", "Monitoreo", "Intranet Local"],
     detailedDescription:
@@ -43,9 +41,8 @@ export const servicesData: Service[] = [
   },
   {
     id: "mobile",
-    title: "Desarrollo Móvil",
-    description:
-      "APKs para Android y Apps para iOS. Lleva tu negocio al móvil.",
+    title: "cards.3.title",
+    description: "cards.3.description",
     icon: Smartphone,
     tags: ["Android", "iOS", "Empresas", "Tiendas"],
     detailedDescription:
@@ -59,8 +56,8 @@ export const servicesData: Service[] = [
   },
   {
     id: "design",
-    title: "Diseño Gráfico",
-    description: "Logos, banners y UI/UX. Identidad visual profesional.",
+    title: "cards.4.title",
+    description: "cards.4.description",
     icon: PenTool,
     tags: ["Banners", "Logos", "Mock-ups", "UI/UX"],
     detailedDescription:

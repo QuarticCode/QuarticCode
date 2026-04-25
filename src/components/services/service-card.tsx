@@ -13,6 +13,7 @@ import {
 import { Service } from "@/src/types/service";
 import { Badge } from "lucide-react";
 import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
 
 interface ServiceCardProps {
   service: Service;
@@ -26,6 +27,7 @@ export function ServiceCard({
   onOpenDetails,
 }: ServiceCardProps) {
   const Icon = service.icon;
+  const t = useTranslations("Services"); // Para traducciones específicas de la tarjeta, si es necesario
 
   return (
     <motion.div
@@ -39,8 +41,8 @@ export function ServiceCard({
           <div className="mb-2 text-primary">
             <Icon size={32} />
           </div>
-          <CardTitle className="text-xl">{service.title}</CardTitle>
-          <CardDescription>{service.description}</CardDescription>
+          <CardTitle className="text-xl">{t(service.title)}</CardTitle>
+          <CardDescription>{t(service.description)}</CardDescription>
         </CardHeader>
         <CardContent className="grow">
           <div className="flex flex-wrap gap-2">
@@ -57,7 +59,7 @@ export function ServiceCard({
             className="w-full justify-between group"
             onClick={() => onOpenDetails(service)}
           >
-            Ver detalles
+            {t("showMore")} {/* "Ver Detalles" traducido */}
             <span className="transition-transform group-hover:translate-x-1">
               →
             </span>

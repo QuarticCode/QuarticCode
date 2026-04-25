@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { ContactDialog } from "./contact-dialog";
 import Background from "../icons/background";
+import { useTranslations } from "next-intl";
 
 export function CtaSection() {
+  const t = useTranslations("Services.cta"); // Para traducciones específicas de esta sección
+
   return (
     <section className="py-20 relative bg-secondary/50 border-y border-border">
       <Background
@@ -23,17 +26,16 @@ export function CtaSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-foreground">
-            ¿Listo para comenzar tu proyecto?
+            {t("title")}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            Transformemos tus ideas en realidad. Contáctanos hoy mismo para una
-            cotización personalizada sin compromiso.
+            {t("description")}
           </p>
 
           {/* Envolver el botón en el Dialog Trigger */}
           <ContactDialog>
             <Button size="lg" className="group text-base px-8 h-12">
-              Solicitar Presupuesto
+              {t("link")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </ContactDialog>

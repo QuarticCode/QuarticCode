@@ -54,7 +54,35 @@
       "title": "Diseño Gráfico",
       "description": "El momento de la creación y diseño de su logo es crucial, además de la creación de flayers u diseños publicitarios para su marca u slogan. Por lo que la participación de nuestro grupo de diseñadores le será de utilidad."
     },
-    "showMore": "Mostrar más"
+    "showMore": "Mostrar más",
+    "page": {
+      "title": "Soluciones tecnológicas para tu negocio",
+      "description": "Desde desarrollo web y móvil hasta infraestructura en la nube. Cubrimos todo el ciclo de vida de tu producto digital.",
+      "badge": "Nuestros Servicios"
+    },
+    "cards": {
+      "1": {
+        "title": "Desarrollo Web",
+        "description": "Impulse su negocio u empresa con la tecnología con nuestro grupo de desarrolladores y diseñadores a su disposición."
+      },
+      "2": {
+        "title": "Servicios en la nube",
+        "description": "Asegura recursos, automatiza y avanza en un abrir y cerrar de ojos con nuestros servicios basados en la nube."
+      },
+      "3": {
+        "title": "Desarrollo Móvil",
+        "description": "Con la creación de una APK móvil tendrá la oportunidad de que sus usuarios estén conectados directamente a usted."
+      },
+      "4": {
+        "title": "Diseño Gráfico",
+        "description": "El momento de la creación y diseño de su logo es crucial, además de la creación de flayers u diseños publicitarios para su marca u slogan. Por lo que la participación de nuestro grupo de diseñadores le será de utilidad."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para comenzar tu proyecto?",
+      "description": "Transformemos tus ideas en realidad. Contáctanos hoy mismo para una cotización personalizada sin compromiso.",
+      "link": "Solicitar Presupuesto"
+    }
   },
   "Projects": {
     "container": {

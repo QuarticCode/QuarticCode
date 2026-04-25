@@ -6,10 +6,12 @@ import { ServiceCard } from "./service-card";
 import { ServiceModal } from "./service-modal";
 import { Service } from "@/src/types/service";
 import { servicesData } from "@/src/lib/data/services";
+import { useTranslations } from "next-intl";
 
 export function ServicesGrid() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const t = useTranslations("Services.page");
 
   const handleOpenDetails = (service: Service) => {
     setSelectedService(service);
@@ -27,15 +29,12 @@ export function ServicesGrid() {
         {/* Header de la sección */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            Nuestros Servicios
+            {t("badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            Soluciones tecnológicas para tu negocio
+            {t("title")}
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Desde desarrollo web y móvil hasta infraestructura en la nube.
-            Cubrimos todo el ciclo de vida de tu producto digital.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("description")}</p>
         </div>
 
         {/* Grid de Tarjetas */}

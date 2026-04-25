@@ -54,7 +54,35 @@
       "title": "Graphic Desing",
       "description": "The moment of creation and design of your logo is crucial, in addition to the creation of flayers or advertising designs for your brand or slogan. Therefore, the participation of our group of designers will be useful."
     },
-    "showMore": "Show more"
+    "showMore": "Show more",
+    "page": {
+      "title": "Technology Solutions for Your Business",
+      "description": "From web and mobile development to cloud infrastructure. We cover the entire lifecycle of your digital product.",
+      "badge": "Our Services"
+    },
+    "cards": {
+      "1": {
+        "title": "Web Development",
+        "description": "Boost your business with cutting-edge technology, supported by our team of developers and designers at your service."
+      },
+      "2": {
+        "title": "Cloud Services",
+        "description": "Secure resources, automate processes, and scale quickly with our cloud-based solutions."
+      },
+      "3": {
+        "title": "Mobile Development",
+        "description": "With a mobile app, you’ll have the opportunity to keep your users directly connected to your business."
+      },
+      "4": {
+        "title": "Graphic Design",
+        "description": "Creating your logo is a crucial step, along with designing flyers and promotional materials for your brand. Our team of designers will help bring your vision to life."
+      }
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "description": "Let’s turn your ideas into reality. Contact us today for a personalized, no-obligation quote.",
+      "link": "Request a Quote"
+    }
   },
   "Projects": {
     "container": {

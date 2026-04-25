@@ -24,7 +24,7 @@ export function ContactDialog({ children }: ContactDialogProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-125">
+      <DialogContent className="sm:max-w-125 md:max-w-160">
         <DialogHeader>
           <DialogTitle className="text-2xl">{t("title")}</DialogTitle>
           <DialogDescription>

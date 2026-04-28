@@ -34,12 +34,13 @@ export function ProjectContainer() {
             </CardDescription>
           </CardHeader>
           <CardFooter>
-            <Link href={"/projects"}>
-              <Button size="lg" className="group text-base px-8 h-12">
-                {t("link")}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
+            {/* <Link href={"/projects"}> */}
+            <Button size="lg" className="group text-base px-8 h-12" disabled>
+              {/* {t("link")} */}
+              Comming Soon
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+            {/* </Link> */}
           </CardFooter>
         </Card>
       </section>

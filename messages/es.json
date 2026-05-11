@@ -101,6 +101,38 @@
       "s6": "Diseño"
     }
   },
+  "FAQ": {
+    "badge": "FAQ",
+    "title": "Preguntas frecuentes",
+    "description": "Todo lo que necesita saber sobre nuestros servicios, tecnologías y proceso de desarrollo.",
+    "footer": "¿Aún tiene preguntas? No dude en contactarnos; con gusto le ayudaremos con su proyecto.",
+    "faqs": {
+      "f1": {
+        "q": "¿Qué servicios ofrece QuarticCode?",
+        "a": "Nos especializamos en desarrollo web moderno, aplicaciones móviles, infraestructura en la nube, diseño UI/UX y soluciones digitales escalables adaptadas para empresas y startups."
+      },
+      "f2": {
+        "q": "¿Qué tecnologías utilizan?",
+        "a": "Nuestro stack principal incluye Next.js, React, TypeScript, TailwindCSS, Node.js, PostgreSQL, Supabase, Docker y plataformas modernas de despliegue en la nube como Vercel."
+      },
+      "f3": {
+        "q": "¿Trabajan con clientes internacionales?",
+        "a": "Sí. Trabajamos de forma remota con clientes de todo el mundo y nos comunicamos tanto en inglés como en español según los requisitos del proyecto."
+      },
+      "f4": {
+        "q": "¿Cuánto tiempo suele tomar un proyecto?",
+        "a": "Los tiempos de desarrollo dependen de la complejidad y el alcance del proyecto. Sitios web para pequeñas empresas pueden tardar algunas semanas, mientras que plataformas más grandes o sistemas personalizados pueden tomar varios meses."
+      },
+      "f5": {
+        "q": "¿Pueden rediseñar o mejorar plataformas existentes?",
+        "a": "Por supuesto. Podemos modernizar sistemas desactualizados, mejorar el SEO, optimizar el rendimiento, rediseñar interfaces y escalar aplicaciones existentes."
+      },
+      "f6": {
+        "q": "¿Ofrecen soporte después del lanzamiento?",
+        "a": "Sí. Ofrecemos mantenimiento, monitoreo, actualizaciones de funcionalidades, optimización y soporte técnico después del despliegue cuando sea necesario."
+      }
+    }
+  },
   "Projects": {
     "container": {
       "title": "¿Proyectos Creados?",

@@ -82,8 +82,6 @@ export default function TechStackSection() {
 
   return (
     <section className="relative overflow-hidden py-24">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-background via-background to-muted/20" />
 
       {/* Glow */}
       <div className="absolute left-1/2 top-0 -z-10 h-100 w-100 -translate-x-1/2 rounded-full bg-indigo-500/10 blur-3xl" />

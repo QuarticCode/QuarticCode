@@ -1,4 +1,5 @@
 import { Contact } from "@/src/components/contact/contact";
+import FAQSection from "@/src/components/faq/faq";
 import { Hero } from "@/src/components/hero/hero";
 import { MockUp } from "@/src/components/mock-up/mock-up";
 import { ProjectContainer } from "@/src/components/projects/project-container";
@@ -22,6 +23,8 @@ export default function Home() {
       <MockUp />
 
       <Contact />
+
+      <FAQSection />
     </div>
   );
 }

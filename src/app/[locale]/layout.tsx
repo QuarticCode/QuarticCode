@@ -19,8 +19,46 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "QuarticCode",
-  description: "Programming Group",
+  metadataBase: new URL("https://quartic-code.com"),
+
+  title: {
+    default: "QuarticCode | Modern Web Development Agency",
+    template: "%s | QuarticCode",
+  },
+
+  description:
+    "QuarticCode is a modern software development agency focused on scalable web applications, mobile apps, cloud infrastructure, and high-performance digital solutions.",
+
+  keywords: [
+    "web development",
+    "next.js agency",
+    "software development",
+    "react development",
+    "mobile app development",
+    "cloud infrastructure",
+    "custom web applications",
+    "UI UX design",
+    "typescript development",
+    "quarticcode",
+  ],
+
+  authors: [{ name: "QuarticCode" }],
+  creator: "QuarticCode",
+
+  openGraph: {
+    title: "QuarticCode | Modern Web Development Agency",
+    description:
+      "Scalable web applications, modern mobile apps, cloud solutions, and high-performance digital products.",
+    url: "https://quartic-code.com",
+    siteName: "QuarticCode",
+    locale: "en_US",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 type Props = {

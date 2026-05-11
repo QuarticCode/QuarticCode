@@ -101,6 +101,38 @@
       "s6": "Desing"
     }
   },
+  "FAQ": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about our services, technologies, and development process.",
+    "footer": "Still have questions? Feel free to contact us and we’ll gladly help you with your project.",
+    "faqs": {
+      "f1": {
+        "q": "What services does QuarticCode offer?",
+        "a": "We specialize in modern web development, mobile applications, cloud infrastructure, UI/UX design, and scalable digital solutions tailored for businesses and startups."
+      },
+      "f2": {
+        "q": "What technologies do you use?",
+        "a": "Our primary stack includes Next.js, React, TypeScript, TailwindCSS, Node.js, PostgreSQL, Supabase, Docker, and modern cloud deployment platforms like Vercel."
+      },
+      "f3": {
+        "q": "Do you work with international clients?",
+        "a": "Yes. We work remotely with clients worldwide and communicate in both English and Spanish depending on the project requirements."
+      },
+      "f4": {
+        "q": "How long does a project usually take?",
+        "a": "Project timelines depend on complexity and scope. Small business websites may take a few weeks, while larger platforms or custom systems can take several months."
+      },
+      "f5": {
+        "q": "Can you redesign or improve existing platforms?",
+        "a": "Absolutely. We can modernize outdated systems, improve SEO, optimize performance, redesign interfaces, and scale existing applications."
+      },
+      "f6": {
+        "q": "Do you provide ongoing support after launch?",
+        "a": "Yes. We offer maintenance, monitoring, feature updates, optimization, and technical support after deployment when needed."
+      }
+    }
+  },
   "Projects": {
     "container": {
       "title": "Projects created?",

@@ -9,7 +9,6 @@ import {
 } from "../ui/card";
 // import { ProjectsList } from "./projects-list";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -37,7 +36,7 @@ export function ProjectContainer() {
             {/* <Link href={"/projects"}> */}
             <Button size="lg" className="group text-base px-8 h-12" disabled>
               {/* {t("link")} */}
-              Comming Soon
+              Coming Soon
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             {/* </Link> */}

@@ -25,7 +25,7 @@
   "Home": {
     "Hero": {
       "title": "Custom Web Development",
-      "subtitle": "We turn your ideas into functional, fast, and engaging digital products.",
+      "subtitle": "We build high-performance Next.js platforms optimized for SEO, speed and scalability.",
       "morphoText": {
         "title": "Grow your business in a",
         "words": {
@@ -42,7 +42,7 @@
     "title": "Services",
     "description": "Explore our services and you will find everything from web and mobile development to cloud infrastructure and high-impact design. Adapting to your digital product.",
     "s1": {
-      "title": "Web Develop",
+      "title": "Web Development",
       "description": "Boost your business or company with technology with our group of developers and designers at your disposal."
     },
     "s2": {
@@ -50,11 +50,11 @@
       "description": "Secure resources, automate, and make progress in the blink of an eye with our cloud-based services."
     },
     "s3": {
-      "title": "Mobile Develop",
+      "title": "Mobile Development",
       "description": "By creating a mobile APK you will have the opportunity for your users to be connected directly to you."
     },
     "s4": {
-      "title": "Graphic Desing",
+      "title": "Graphic Design",
       "description": "The moment of creation and design of your logo is crucial, in addition to the creation of flayers or advertising designs for your brand or slogan. Therefore, the participation of our group of designers will be useful."
     },
     "showMore": "Show more",
@@ -85,6 +85,20 @@
       "title": "Ready to start your project?",
       "description": "Let’s turn your ideas into reality. Contact us today for a personalized, no-obligation quote.",
       "link": "Request a Quote"
+    }
+  },
+  "Tech": {
+    "badge": "Technology Stack",
+    "title": "Built With Modern Technologies",
+    "description": "We build scalable, high-performance digital products using modern technologies focused on speed, maintainability, and exceptional user experience.",
+    "footer": "Our technology choices are focused on scalability, SEO performance, maintainability, and rapid deployment for modern businesses.",
+    "Stacks": {
+      "s1": "Frontend",
+      "s2": "Backend",
+      "s3": "Database",
+      "s4": "Cloud & DevOps",
+      "s5": "Mobile",
+      "s6": "Desing"
     }
   },
   "Projects": {

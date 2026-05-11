@@ -25,7 +25,7 @@
   "Home": {
     "Hero": {
       "title": "Desarrollo web a medida",
-      "subtitle": "Transformamos tus ideas en productos digitales funcionales, rápidos y atractivos.",
+      "subtitle": "Desarrollamos plataformas Next.js de alto rendimiento, optimizadas para SEO, velocidad y escalabilidad.",
       "morphoText": {
         "title": "Impulsa tu negocio de forma",
         "words": {
@@ -85,6 +85,20 @@
       "title": "¿Listo para comenzar tu proyecto?",
       "description": "Transformemos tus ideas en realidad. Contáctanos hoy mismo para una cotización personalizada sin compromiso.",
       "link": "Solicitar Presupuesto"
+    }
+  },
+  "Tech": {
+    "badge": "Paquete Tecnológico",
+    "title": "Construido con tecnologías modernas",
+    "description": "Desarrollamos productos digitales escalables y de alto rendimiento, utilizando tecnologías modernas centradas en la velocidad, la mantenibilidad y una experiencia de usuario excepcional.",
+    "footer": "Nuestras elecciones tecnológicas se centran en la escalabilidad, el rendimiento SEO, la mantenibilidad y el despliegue rápido para empresas modernas.",
+    "Stacks": {
+      "s1": "Interfaz",
+      "s2": "Servidor",
+      "s3": "Base de Datos",
+      "s4": "Nube & DevOps",
+      "s5": "Móvil",
+      "s6": "Diseño"
     }
   },
   "Projects": {

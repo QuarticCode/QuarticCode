@@ -3,6 +3,7 @@ import { Hero } from "@/src/components/hero/hero";
 import { MockUp } from "@/src/components/mock-up/mock-up";
 import { ProjectContainer } from "@/src/components/projects/project-container";
 import Services from "@/src/components/services/services";
+import TechStackSection from "@/src/components/tech/tech-stack-section";
 import { CtaWorks } from "@/src/components/works/cta-works";
 
 export default function Home() {
@@ -11,6 +12,8 @@ export default function Home() {
       <Hero />
 
       <Services />
+
+      <TechStackSection />
 
       <CtaWorks />
 

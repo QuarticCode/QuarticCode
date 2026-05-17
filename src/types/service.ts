@@ -4,6 +4,7 @@ export interface Service {
   title: string;
   description: string;
   icon: React.ElementType; // Para componentes de Lucide
+  link: string;
   tags: string[];
   detailedDescription: string;
   features: string[];

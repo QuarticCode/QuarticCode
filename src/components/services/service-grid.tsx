@@ -1,27 +1,11 @@
-// src/components/services/services-grid.tsx
 "use client";
 
-import { useState } from "react";
 import { ServiceCard } from "./service-card";
-import { ServiceModal } from "./service-modal";
-import { Service } from "@/src/types/service";
 import { servicesData } from "@/src/lib/data/services";
 import { useTranslations } from "next-intl";
 
 export function ServicesGrid() {
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const t = useTranslations("Services.page");
-
-  const handleOpenDetails = (service: Service) => {
-    setSelectedService(service);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedService(null), 300); // Limpia el dato después de cerrar
-  };
 
   return (
     <section className="py-20 bg-background" id="servicios">
@@ -44,17 +28,10 @@ export function ServicesGrid() {
               key={service.id}
               service={service}
               index={index}
-              onOpenDetails={handleOpenDetails}
+              link={service.link}
             />
           ))}
         </div>
-
-        {/* Modal */}
-        <ServiceModal
-          service={selectedService}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-        />
       </div>
     </section>
   );

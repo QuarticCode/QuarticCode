@@ -14,18 +14,15 @@ import { Service } from "@/src/types/service";
 import { Badge } from "lucide-react";
 import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/navigation";
 
 interface ServiceCardProps {
   service: Service;
+  link: string;
   index: number; // Para el delay escalonado
-  onOpenDetails: (service: Service) => void;
 }
 
-export function ServiceCard({
-  service,
-  index,
-  onOpenDetails,
-}: ServiceCardProps) {
+export function ServiceCard({ service, link, index }: ServiceCardProps) {
   const Icon = service.icon;
   const t = useTranslations("Services"); // Para traducciones específicas de la tarjeta, si es necesario
 
@@ -54,16 +51,14 @@ export function ServiceCard({
           </div>
         </CardContent>
         <CardFooter>
-          <Button
-            variant="ghost"
-            className="w-full justify-between group"
-            onClick={() => onOpenDetails(service)}
-          >
-            {t("showMore")} {/* "Ver Detalles" traducido */}
-            <span className="transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </Button>
+          <Link href={link}>
+            <Button variant="ghost" className="w-full justify-between group">
+              {t("showMore")} {/* "Ver Detalles" traducido */}
+              <span className="transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </motion.div>

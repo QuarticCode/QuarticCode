@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { Telegram } from "../icons/telegram";
-import { Github } from "../icons/github";
-import { Blog } from "../icons/blog";
-import { Twitter } from "../icons/twitter";
-import { LinkedIn } from "../icons/linkedin";
-import { Envelop } from "../icons/envelop";
+import {
+  Blog,
+  Twitter,
+  LinkedIn,
+  Envelop,
+  Github,
+  Telegram,
+} from "@/src/components/icons";
 import { useTranslations } from "next-intl";
 
 export function Footer() {
@@ -26,9 +28,7 @@ export function Footer() {
                 QuarticCode
               </span>
             </a>
-            <p className="text-sm  leading-relaxed max-w-xs">
-              {t("info")}
-            </p>
+            <p className="text-sm  leading-relaxed max-w-xs">{t("info")}</p>
           </div>
 
           {/* Contact Section */}

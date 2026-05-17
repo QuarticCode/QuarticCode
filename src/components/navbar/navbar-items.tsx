@@ -17,15 +17,14 @@ export function NavbarItems() {
       <Link href={"/works"}>
         <Button variant="ghost">{t("work")}</Button>
       </Link>
-      <Link href={"/projects"}>
+      {/* <Link href={"/projects"}>
         <Button variant="ghost">{t("project")}</Button>
-      </Link>
+      </Link> */}
       <Link href={"/#contact"}>
         <Button variant="ghost">{t("contact")}</Button>
       </Link>
       <Button variant="ghost"></Button>
       <LocaleSwitcher />
-      <ThemeSelector />
     </section>
   );
 }

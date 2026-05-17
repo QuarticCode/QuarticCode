@@ -23,6 +23,7 @@ export const servicesData: Service[] = [
       "Landing pages optimizadas para campañas.",
       "Blogs dinámicos y fáciles de gestionar.",
     ],
+    link: "/services/web-development",
   },
   {
     id: "cloud",
@@ -38,6 +39,7 @@ export const servicesData: Service[] = [
       "Sistemas de monitoreo en tiempo real.",
       "Soluciones Intranet sin dependencia de internet.",
     ],
+    link: "/services/cloud-development",
   },
   {
     id: "mobile",
@@ -53,6 +55,7 @@ export const servicesData: Service[] = [
       "Integración con sistemas web existentes.",
       "Diseño adaptativo a diferentes pantallas.",
     ],
+    link: "/services/mobile-development",
   },
   {
     id: "design",
@@ -68,5 +71,6 @@ export const servicesData: Service[] = [
       "Mock-ups realistas para presentaciones.",
       "Diseño de interfaz de usuario (UI) y experiencia (UX).",
     ],
+    link: "/services/design-development",
   },
 ];

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://quartic-code.com
+
+# Sitemaps
+Sitemap: https://quartic-code.com/sitemap.xml

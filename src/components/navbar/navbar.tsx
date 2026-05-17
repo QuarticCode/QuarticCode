@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SheetMenu } from "./sheet-menu";
 import { NavbarItems } from "./navbar-items";
+import ThemeSelector from "../theme/theme-selector";
 
 export function Navbar() {
   return (
@@ -15,7 +16,9 @@ export function Navbar() {
       <section className="md:flex hidden">
         <NavbarItems />
       </section>
+
       <SheetMenu child={<NavbarItems />} />
+      <ThemeSelector />
     </nav>
   );
 }

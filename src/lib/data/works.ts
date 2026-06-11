@@ -13,4 +13,10 @@ export const works: TWork[] = [
     info: "Mercado Labida es un supermercado virtual que ofrece una amplia variedad de productos frescos y de calidad, con entrega rápida y segura a tu puerta. Descubre la comodidad de hacer tus compras en línea con nosotros.",
     link: "https://mercado-labida-store.vercel.app",
   },
+  {
+    img: "/works/sebasois-val-logo.png",
+    title: "Sebasois Val",
+    info: "Sebasois Val es una tienda virtual de energías renovables que ofrece una amplia gama de productos para el hogar y la industria, con entrega rápida y segura a tu puerta. Descubre la comodidad de hacer tus compras en línea con nosotros.",
+    link: "https://sebasois-val.vercel.app",
+  },
 ];

@@ -7,10 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-// import { ProjectsList } from "./projects-list";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "@/src/i18n/navigation";
 
 export function ProjectContainer() {
   const t = useTranslations("Projects.container");
@@ -33,13 +33,12 @@ export function ProjectContainer() {
             </CardDescription>
           </CardHeader>
           <CardFooter>
-            {/* <Link href={"/projects"}> */}
-            <Button size="lg" className="group text-base px-8 h-12" disabled>
-              {/* {t("link")} */}
-              Coming Soon
+            <Link href={"/projects"}>
+            <Button size="lg" className="group text-base px-8 h-12">
+              {t("link")} 
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            {/* </Link> */}
+            </Link>
           </CardFooter>
         </Card>
       </section>

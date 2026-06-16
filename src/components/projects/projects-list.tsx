@@ -8,7 +8,7 @@ export function ProjectsList() {
   const { projects, loading, error } = useProjects();
 
   return (
-    <section className="w-full py-20 px-4">
+    <section className="w-full px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight bg-linear-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
           Proyectos Terminados

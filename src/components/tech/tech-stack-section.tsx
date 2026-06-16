@@ -21,8 +21,6 @@ import {
 import { Card, CardContent } from "../ui/card";
 import { useTranslations } from "next-intl";
 
-// import { Card, CardContent } from "@/components/ui/card";
-
 type TechItem = {
   name: string;
   icon: React.ElementType;
@@ -73,7 +71,7 @@ const techStack: TechCategory[] = [
   },
   {
     title: "s6",
-    items: [{ name: "Figma", icon: SiFigma }],
+    items: [{ name: "Figma", icon: SiFigma }]
   },
 ];
 
@@ -111,16 +109,6 @@ export default function TechStackSection() {
         {/* Categories */}
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {techStack.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.4,
-                delay: categoryIndex * 0.08,
-              }}
-              viewport={{ once: true }}
-            >
               <Card className="group h-full border-border/50 bg-background/60 backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.08)]">
                 <CardContent className="p-6">
                   <div className="mb-6 flex items-center justify-between">
@@ -158,7 +146,6 @@ export default function TechStackSection() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
           ))}
         </div>
 

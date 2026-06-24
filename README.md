@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 👋 Hi, We're QuarticCode
 
-First, run the development server:
+### Software Developer • Full Stack Engineer
+Building modern desktop, web and business solutions using C++, Qt, Python and TypeScript.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 About Me
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I'm a software developer focused on creating high-performance applications and scalable digital solutions.
 
-## Learn More
+My work ranges from:
 
-To learn more about Next.js, take a look at the following resources:
+- 🖥️ Desktop Applications with C++ and Qt
+- 🌐 Modern Web Applications with Next.js and React
+- ⚙️ Backend APIs and Automation
+- 🏪 POS Systems and Business Software
+- 📊 Database Design and Management
+- 🤖 AI-powered tools and integrations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Currently working on:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ZiPlusDownload
+- POS Systems for small businesses
+- Marketing automation platforms
+- Cross-platform desktop applications
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Technologies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Languages
+
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge)
+
+### Frontend
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro)
+
+### Backend
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express)
+
+### Desktop
+
+![Qt](https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake)
+
+### Databases
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite)
+
+---
+
+## 📌 Featured Projects
+
+### 🎵 ZiPlusDownload
+
+Cross-platform media downloader built with:
+
+- C++
+- Qt6
+- CMake
+- yt-dlp
+- FFmpeg
+
+Features:
+
+- YouTube downloads
+- Audio extraction
+- Playlist support
+- Modern desktop UI
+- Multi-platform support
+
+---
+
+### 🏪 POS Systems
+
+Professional point-of-sale systems for businesses.
+
+Features:
+
+- Inventory management
+- Sales reports
+- Customer tracking
+- Cash register control
+
+---
+
+### 🤖 Automation Tools
+
+Automation platforms for:
+
+- Marketing
+- Business workflows
+- Content management
+- AI integrations
+
+---
+
+## 📈 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=quarticcode&show_icons=true" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=quarticcode" />
+</p>
+
+---
+
+## 📫 Contact
+
+📧 quarticcode@gmail.com
+
+🌐 https://github.com/quarticcode
+
+---
+
+<div align="center">
+
+### Thanks for visiting my profile ⭐
+
+Building software that solves real-world problems.
+
+</div>

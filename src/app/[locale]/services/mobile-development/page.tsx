@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
 import {
   Card,
@@ -24,168 +25,98 @@ import {
   LucideIcon,
 } from "lucide-react";
 
-/* ======================
-   Metadata
-====================== */
-
-export const metadata: Metadata = {
-  title: "Mobile App Development | QuarticCode",
-
-  description:
-    "Custom mobile applications for businesses, startups, eCommerce, ERP systems and innovative ideas.",
-
-  keywords: [
-    "Mobile Development",
-    "App Development",
-    "Business Apps",
-    "eCommerce Apps",
-    "ERP Apps",
-    "Custom Apps",
-    "QuarticCode",
-  ],
-
-  alternates: {
-    canonical: "https://quarticcode.com/services/mobile-development",
-  },
-
-  openGraph: {
-    title: "Mobile App Development | QuarticCode",
-
-    description: "Custom mobile applications built for growth.",
-
-    url: "https://quarticcode.com/services/mobile-development",
-
-    siteName: "QuarticCode",
-
-    type: "website",
-  },
-};
+import { useTranslations } from "next-intl";
 
 /* ======================
    Types
 ====================== */
 
-type Service = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-};
+// Mapeo de iconos por índice
+const appIcons: LucideIcon[] = [
+  Briefcase, // 0: Business Apps
+  ShoppingCart, // 1: eCommerce Apps
+  Building2, // 2: ERP & Management Apps
+  Calendar, // 3: Booking Apps
+  Truck, // 4: Delivery Platforms
+  BarChart3, // 5: Analytics Dashboards
+  Users, // 6: Community Apps
+  Rocket, // 7: Startup Ideas
+];
 
 /* ======================
-   Categories
+   Metadata - Generada dinámicamente
 ====================== */
 
-const appTypes: Service[] = [
-  {
-    title: "Business Apps",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Services.pages.mobile");
 
-    description:
-      "Applications designed to improve operations and internal workflows.",
+  return {
+    title: `Mobile App Development | QuarticCode`,
+    description: t("description"),
 
-    icon: Briefcase,
-  },
+    keywords: [
+      "Mobile Development",
+      "App Development",
+      "Business Apps",
+      "eCommerce Apps",
+      "ERP Apps",
+      "Custom Apps",
+      "QuarticCode",
+    ],
 
-  {
-    title: "eCommerce Apps",
+    alternates: {
+      canonical: "https://quarticcode.com/services/mobile-development",
+    },
 
-    description: "Mobile stores, catalog browsing and customer purchases.",
-
-    icon: ShoppingCart,
-  },
-
-  {
-    title: "ERP & Management Apps",
-
-    description: "Control inventory, employees, sales and business processes.",
-
-    icon: Building2,
-  },
-
-  {
-    title: "Booking Apps",
-
-    description: "Appointments, reservations and scheduling systems.",
-
-    icon: Calendar,
-  },
-
-  {
-    title: "Delivery Platforms",
-
-    description: "Orders, tracking and logistics systems.",
-
-    icon: Truck,
-  },
-
-  {
-    title: "Analytics Dashboards",
-
-    description: "Real-time metrics and monitoring from mobile devices.",
-
-    icon: BarChart3,
-  },
-
-  {
-    title: "Community Apps",
-
-    description: "Memberships, messaging and social interaction.",
-
-    icon: Users,
-  },
-
-  {
-    title: "Startup Ideas",
-
-    description: "Transform custom ideas into scalable applications.",
-
-    icon: Rocket,
-  },
-];
-
-const benefits = [
-  "Cross-platform development",
-  "Fast performance",
-  "Cloud integrations",
-  "Authentication systems",
-  "Payments & subscriptions",
-  "Scalable architecture",
-];
+    openGraph: {
+      title: `Mobile App Development | QuarticCode`,
+      description: t("description"),
+      url: "https://quarticcode.com/services/mobile-development",
+      siteName: "QuarticCode",
+      type: "website",
+    },
+  };
+}
 
 /* ======================
-   Page
+   Page Component
 ====================== */
 
 export default function MobileDevelopmentPage() {
+  const t = useTranslations("Services.pages.mobile");
+
+  // Obtener arrays de traducciones
+  const appTypes = t.raw("types") as { title: string; description: string }[];
+  const benefits = t.raw("benefits") as string[];
+
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
+    <section className="min-h-screen text-foreground flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
       <div className="container py-24">
         {/* HERO */}
 
         <header className="mb-24 max-w-4xl">
           <span className="inline-flex rounded-full bg-indigo-500/10 px-4 py-2 text-sm text-indigo-500">
-            Mobile Development
+            {t("badge")}
           </span>
 
           <h1 className="mt-6 text-5xl font-bold leading-tight md:text-7xl">
-            Apps built around{" "}
-            <span className="text-indigo-500">your ideas & business</span>
+            {t("title")}{" "}
+            <span className="text-indigo-500">{t("color-title")}</span>
           </h1>
 
           <p className="mt-8 text-lg leading-8 text-muted-foreground">
-            QuarticCode develops custom mobile applications for businesses,
-            startups and entrepreneurs. From eCommerce control apps to internal
-            tools, ERP systems and completely new ideas.
+            {t("description")}
           </p>
         </header>
 
         {/* APP TYPES */}
 
         <section>
-          <h2 className="mb-10 text-4xl font-bold">Types of apps we build</h2>
+          <h2 className="mb-10 text-4xl font-bold">{t("types-title")}</h2>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {appTypes.map((app) => {
-              const Icon = app.icon;
+            {appTypes.map((app, index) => {
+              const Icon = appIcons[index % appIcons.length];
 
               return (
                 <Card key={app.title}>
@@ -205,7 +136,7 @@ export default function MobileDevelopmentPage() {
         {/* BENEFITS */}
 
         <section className="py-24">
-          <h2 className="mb-10 text-4xl font-bold">Included capabilities</h2>
+          <h2 className="mb-10 text-4xl font-bold">{t("benefits-title")}</h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             {benefits.map((item) => (
@@ -224,12 +155,10 @@ export default function MobileDevelopmentPage() {
           <CardContent className="py-16 text-center">
             <Smartphone className="mx-auto mb-6 h-12 w-12 text-indigo-500" />
 
-            <h2 className="text-4xl font-bold">Have an idea?</h2>
+            <h2 className="text-4xl font-bold">{t("feature-title")}</h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Not every app fits a category. If you have a unique concept,
-              QuarticCode can design and develop custom mobile experiences
-              around it.
+              {t("feature-description")}
             </p>
           </CardContent>
         </Card>
@@ -238,11 +167,9 @@ export default function MobileDevelopmentPage() {
 
         <Card className="mt-24 border-indigo-500/20">
           <CardContent className="py-16 text-center">
-            <h2 className="text-4xl font-bold">Ready to build your app?</h2>
+            <h2 className="text-4xl font-bold">{t("cta-title")}</h2>
 
-            <p className="mt-4 text-muted-foreground">
-              Transform your idea into a scalable mobile product.
-            </p>
+            <p className="mt-4 text-muted-foreground">{t("cta-description")}</p>
 
             <Link
               href="/contact"
@@ -260,7 +187,7 @@ export default function MobileDevelopmentPage() {
                 hover:bg-indigo-500
               "
             >
-              Start a project
+              {t("cta-button")}
               <ArrowRight size={18} />
             </Link>
           </CardContent>

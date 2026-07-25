@@ -102,6 +102,170 @@
       "title": "Ready to start your project?",
       "description": "Let’s turn your ideas into reality. Contact us today for a personalized, no-obligation quote.",
       "link": "Request a Quote"
+    },
+    "pages": {
+      "web": {
+        "badge": "Web Development",
+        "title": "Web Development",
+        "color-title": "Services",
+        "description": "At QuarticCode, we create modern digital experiences: business websites, personal pages, blogs, eCommerce and ERP systems focused on performance, scalability and SEO.",
+        "cta-primary": "Start a project",
+        "cta-secondary": "View portfolio",
+        "title-service": "Our Services",
+        "services": [
+          {
+            "title": "Business Websites",
+            "desc": "Professional websites for companies, startups and institutions with modern design and optimized performance."
+          },
+          {
+            "title": "Personal Branding",
+            "desc": "Personal portfolios and landing pages designed to highlight your skills and projects."
+          },
+          {
+            "title": "Blogs & Content",
+            "desc": "Content management systems with intuitive admin panels for writers and creators."
+          },
+          {
+            "title": "eCommerce",
+            "desc": "Online stores with payment gateways, inventory management and optimized shopping experiences."
+          },
+          {
+            "title": "ERP Systems",
+            "desc": "Custom enterprise resource planning systems to streamline your business operations."
+          }
+        ],
+        "choose": {
+          "title": "Why Choose Us",
+          "list": [
+            "Scalable Architecture",
+            "SEO Optimized",
+            "Fast Performance",
+            "Modern Technologies",
+            "Mobile First",
+            "Clean Code"
+          ]
+        },
+        "process": {
+          "title": "How We Work",
+          "steps": ["Requirements", "Design", "Development", "Deployment"]
+        },
+        "cta": {
+          "title": "Ready to build your next project?",
+          "description": "Let's create a website that helps your business grow.",
+          "button": "Contact QuarticCode"
+        }
+      },
+      "mobile": {
+        "badge": "Mobile Development",
+        "title": "Apps built around",
+        "color-title": "your ideas & business",
+        "description": "QuarticCode develops custom mobile applications for businesses, startups and entrepreneurs. From eCommerce control apps to internal tools, ERP systems and completely new ideas.",
+        "types-title": "Types of apps we build",
+        "types": [
+          {
+            "title": "Business Apps",
+            "description": "Applications designed to improve operations and internal workflows."
+          },
+          {
+            "title": "eCommerce Apps",
+            "description": "Mobile stores, catalog browsing and customer purchases."
+          },
+          {
+            "title": "ERP & Management Apps",
+            "description": "Control inventory, employees, sales and business processes."
+          },
+          {
+            "title": "Booking Apps",
+            "description": "Appointments, reservations and scheduling systems."
+          },
+          {
+            "title": "Delivery Platforms",
+            "description": "Orders, tracking and logistics systems."
+          },
+          {
+            "title": "Analytics Dashboards",
+            "description": "Real-time metrics and monitoring from mobile devices."
+          },
+          {
+            "title": "Community Apps",
+            "description": "Memberships, messaging and social interaction."
+          },
+          {
+            "title": "Startup Ideas",
+            "description": "Transform custom ideas into scalable applications."
+          }
+        ],
+        "benefits-title": "Included capabilities",
+        "benefits": [
+          "Cross-platform development",
+          "Fast performance",
+          "Cloud integrations",
+          "Authentication systems",
+          "Payments & subscriptions",
+          "Scalable architecture"
+        ],
+        "feature-title": "Have an idea?",
+        "feature-description": "Not every app fits a category. If you have a unique concept, QuarticCode can design and develop custom mobile experiences around it.",
+        "cta-title": "Ready to build your app?",
+        "cta-description": "Transform your idea into a scalable mobile product.",
+        "cta-button": "Start a project"
+      },
+      "infrastructure": {
+        "badge": "Cloud Infrastructure & Business Systems",
+        "title": "Infrastructure built for",
+        "color-title": "reliability & growth",
+        "description": "QuarticCode develops scalable infrastructure including APIs, databases, monitoring systems, intranets and ERP/POS environments for businesses requiring stable operations.",
+        "services-title": "Services included",
+        "services": [
+          {
+            "title": "API Development",
+            "description": "Scalable APIs powering websites, mobile apps, ERP systems and integrations."
+          },
+          {
+            "title": "Database Architecture",
+            "description": "Secure and optimized databases designed for performance and growth."
+          },
+          {
+            "title": "Monitoring",
+            "description": "Real-time alerts, metrics and infrastructure monitoring."
+          },
+          {
+            "title": "Business Intranets",
+            "description": "Local internal systems and networks for businesses."
+          },
+          {
+            "title": "ERP & POS Systems",
+            "description": "Local or cloud environments for inventory, sales and operations."
+          }
+        ],
+        "benefits-title": "Why businesses need reliable infrastructure",
+        "benefits": [
+          "Scalable architecture",
+          "Secure infrastructure",
+          "Monitoring & alerts",
+          "Local and cloud deployments",
+          "High availability",
+          "Business continuity"
+        ],
+        "use-cases-title": "Common business solutions",
+        "use-cases": [
+          {
+            "title": "ERP Systems",
+            "description": "Internal software for operations, inventory and business workflows."
+          },
+          {
+            "title": "POS Infrastructure",
+            "description": "Local sales systems with inventory synchronization and monitoring."
+          },
+          {
+            "title": "API Ecosystems",
+            "description": "Backend services connecting websites, apps and third-party systems."
+          }
+        ],
+        "cta-title": "Need secure infrastructure?",
+        "cta-description": "Build scalable systems designed for long-term growth, monitoring and reliability.",
+        "cta-button": "Contact QuarticCode"
+      }
     }
   },
   "Tech": {
@@ -156,6 +320,11 @@
       "description": "In our portfolio of completed projects, you can see the tangible result of years of experience working as a cohesive team of programmers. We don't just build software; we deliver robust, scalable, high-quality products that have solved real problems for our clients.",
       "link": "See projects"
     },
+    "list": {
+      "title": "Finished Projects",
+      "description": "Some of the projects I have worked on recently.",
+      "loading": "Loading projects..."
+    },
     "p1": {
       "title": "PyDownVideo",
       "description": "Download any YouTube video or audio with just one click."
@@ -196,6 +365,37 @@
       "redirect": "Redirecting..."
     }
   },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact | QuarticCode",
+      "description": "Get in touch with QuarticCode for web development, ERP systems, eCommerce and custom software solutions."
+    },
+    "badge": "Contact QuarticCode",
+    "titlePrefix": "Let’s build your",
+    "titleHighlight": "next project",
+    "subtitle": "Need a website, ERP, eCommerce or custom software solution? Tell us about your idea.",
+    "otherWays": "Other ways to contact us",
+    "responseTime": "Response time",
+    "responseTimeText": "Usually within 24 hours.",
+    "freeEstimates": "Free estimates?",
+    "freeEstimatesText": "Yes, all project estimates are free.",
+    "ctaTitle": "Ready to start?",
+    "ctaDescription": "Your idea deserves more than a template. Build something scalable with QuarticCode.",
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "Send us detailed project information."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "description": "Fast communication for projects."
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Quick estimates and support."
+      }
+    }
+  },
   "MockUp": {
     "b1": "Try it and see",
     "b2": "your idea."
@@ -203,7 +403,101 @@
   "Works": {
     "cta-title": "Do you want to see already finished jobs?",
     "cta-description": "You can review the following section and you will find previous work.",
-    "cta-link": "Go to the section"
+    "cta-link": "Go to the section",
+    "title": "Finished Works",
+    "description": "Here you will find some of our previous works, which show our experience in development",
+    "show": "Show Work",
+    "pages": {
+      "pan-y-chocolate": {
+        "badge": "Android POS Application",
+        "title": "Pan y Chocolate",
+        "color-title": "Point of Sale",
+        "description": "Pan y Chocolate POS is a mobile Point of Sale application developed for cafeterias and restaurants, designed to simplify order processing, payment management, thermal receipt printing and sales reporting while improving operational efficiency.",
+        "what": "What is Pan y Chocolate POS?",
+        "what-text1": "The application digitizes the complete sales workflow, allowing employees to process customer orders quickly while maintaining an accurate record of every transaction.",
+        "what-text2": "It was specifically created for cafeterias, restaurants and similar businesses where speed, reliability and organization are essential.",
+        "what-text3": "Every completed sale is automatically stored, printed through a thermal printer and later grouped into business closures, providing detailed statistics for administrators.",
+        "features-title": "Main Features",
+        "features": {
+          "f1": {
+            "title": "Product Management",
+            "description": "Create, edit and organize products and categories with full CRUD operations."
+          },
+          "f2": {
+            "title": "Sales Processing",
+            "description": "Fast checkout process optimized for cafeterias and restaurants."
+          },
+          "f3": {
+            "title": "Order Management",
+            "description": "Efficiently manage and track customer orders from start to finish."
+          },
+          "f4": {
+            "title": "Payment Methods",
+            "description": "Support for cash and bank transfer payments during checkout."
+          },
+          "f5": {
+            "title": "Thermal Printing",
+            "description": "Generate and print professional receipts using thermal printers."
+          },
+          "f6": {
+            "title": "Ticket History",
+            "description": "Every completed sale is securely stored for future reference."
+          },
+          "f7": {
+            "title": "Business Closures",
+            "description": "Group tickets into daily closures with sales statistics and totals."
+          },
+          "f8": {
+            "title": "User Roles",
+            "description": "Separate permissions for administrators and cashiers."
+          },
+          "f9": {
+            "title": "Import & Export",
+            "description": "Transfer products, categories and tickets between installations."
+          }
+        },
+        "highlights": [
+          "Android native application",
+          "Secure login system",
+          "Role-based permissions",
+          "Cash & bank transfer payments",
+          "Thermal receipt printing",
+          "Sales history",
+          "Daily business closures",
+          "Import & export support"
+        ],
+        "technologies": [
+          "Kotlin",
+          "Jetpack Compose",
+          "Room Database",
+          "SQLite",
+          "MVVM Architecture",
+          "Material Design 3"
+        ],
+        "roles-title": "User Roles",
+        "admin-title": "Administrator",
+        "admin-description": "Full system access including user management, products, categories, reports, imports, exports, sales history and business closures.",
+        "cashier-title": "Cashier",
+        "cashier-description": "Focused on customer service by selecting products, processing sales and printing receipts without administrative permissions.",
+        "tech-title": "Technologies",
+        "highlights-title": "Project Highlights",
+        "cta-title": "Interested in a custom POS solution?",
+        "cta-description": "Whether you need a restaurant POS, inventory system or a custom business application, QuarticCode can build it.",
+        "cta-button": "Start a Project"
+      }
+    }
+  },
+  "ServicesPage": {
+    "metadata": {
+      "title": "Services",
+      "description": "Web development services and digital solutions from QuarticCode."
+    }
+  },
+  "WorksPage": {
+    "metadata": {
+      "title": "Works",
+      "description": "See some of our completed web development projects."
+    }
   },
   "Footer": {
     "info": "We are a group of developers ready to make all your ideas possible and update your business.",

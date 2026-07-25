@@ -1,9 +1,19 @@
 import { Works } from "@/src/components/works/works";
+import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-  title: "Servicios",
-  description: "Trabajos de desarrollo web | QuarticCode",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "WorksPage" });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function WorksPage() {
   return (

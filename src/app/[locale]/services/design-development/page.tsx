@@ -143,7 +143,7 @@ const useCases = [
 
 export default function DesignPage() {
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
+    <section className="min-h-screen text-foreground flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
       <div className="container py-24">
         {/* HERO */}
 

@@ -8,7 +8,7 @@ export function ServicesGrid() {
   const t = useTranslations("Services.page");
 
   return (
-    <section className="py-20 bg-background" id="servicios">
+    <section className="py-20" id="servicios">
       <div className="container mx-auto px-4">
         {/* Header de la sección */}
         <div className="text-center max-w-2xl mx-auto mb-16">

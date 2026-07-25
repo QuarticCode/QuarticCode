@@ -19,4 +19,10 @@ export const works: TWork[] = [
     info: "Sebasois Val es una tienda virtual de energías renovables que ofrece una amplia gama de productos para el hogar y la industria, con entrega rápida y segura a tu puerta. Descubre la comodidad de hacer tus compras en línea con nosotros.",
     link: "https://sebasois-val.vercel.app",
   },
+  {
+    img: "/works/pan-y-chocolate.png",
+    title: "Pan y Chocolate",
+    info: "Pan y Chocolate POS es una aplicación móvil desarrollada para Android, diseñada para optimizar la gestión de puntos de venta en cafeterías, restaurantes y pequeños comercios. La aplicación ofrece una solución completa para el control de ventas, productos y operaciones diarias, combinando facilidad de uso con un flujo de trabajo seguro y eficiente.",
+    link: "http://localhost:3000/works/pan-y-chocolate",
+  },
 ];

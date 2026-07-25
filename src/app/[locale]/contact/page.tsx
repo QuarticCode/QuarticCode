@@ -1,90 +1,70 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Card, CardContent } from "@/src/components/ui/card";
 
-import { Linkedin, LucideIcon, Mail, MessageCircle, Send } from "lucide-react";
+import { Mail, MessageCircle, Send } from "lucide-react";
 import ContactForm from "@/src/components/contact/contact-form";
+import { getTranslations } from "next-intl/server";
 
-/* ======================
-   Metadata
-====================== */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ContactPage" });
 
-export const metadata: Metadata = {
-  title: "Contact | QuarticCode",
-
-  description:
-    "Get in touch with QuarticCode for web development, ERP systems, eCommerce and custom software solutions.",
-
-  alternates: {
-    canonical: "https://quarticcode.com/contact",
-  },
-
-  openGraph: {
-    title: "Contact | QuarticCode",
-
-    description: "Start your next digital project with QuarticCode.",
-
-    url: "https://quarticcode.com/contact",
-
-    siteName: "QuarticCode",
-
-    type: "website",
-  },
-};
-
-/* ======================
-   Types
-====================== */
-
-type ContactMethod = {
-  title: string;
-  description: string;
-  href: string;
-  icon: LucideIcon;
-};
-
-/* ======================
-   Data
-====================== */
-
-const contactMethods: ContactMethod[] = [
-  {
-    title: "Email",
-    description: "Send us detailed project information.",
-    href: "mailto:contact@quarticcode.com",
-    icon: Mail,
-  },
-
-  {
-    title: "Telegram",
-    description: "Fast communication for projects.",
-    href: "https://t.me/TUUSUARIO",
-    icon: Send,
-  },
-
-  {
-    title: "WhatsApp",
-    description: "Quick estimates and support.",
-    href: "https://wa.me/TUNUMERO",
-    icon: MessageCircle,
-  },
-
-  {
-    title: "LinkedIn",
-    description: "Professional network.",
-    href: "https://linkedin.com/in/TUPERFIL",
-    icon: Linkedin,
-  },
-];
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+    alternates: {
+      canonical: "https://quarticcode.com/contact",
+    },
+    openGraph: {
+      title: t("metadata.title"),
+      description: t("metadata.description"),
+      url: "https://quarticcode.com/contact",
+      siteName: "QuarticCode",
+      type: "website",
+    },
+  };
+}
 
 /* ======================
    Page
 ====================== */
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ContactPage" });
+
+  const methods = [
+    {
+      title: t("methods.email.title"),
+      description: t("methods.email.description"),
+      href: "mailto:contact@quarticcode.com",
+      icon: Mail,
+    },
+    {
+      title: t("methods.telegram.title"),
+      description: t("methods.telegram.description"),
+      href: "https://t.me/TUUSUARIO",
+      icon: Send,
+    },
+    {
+      title: t("methods.whatsapp.title"),
+      description: t("methods.whatsapp.description"),
+      href: "https://wa.me/+5355153703",
+      icon: MessageCircle,
+    },
+  ];
+
   return (
-    <section className="min-h-screen bg-background text-foreground  flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
+    <section className="min-h-screen text-foreground  flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
       <div className="container py-24">
         {/* ======================
             Hero
@@ -101,7 +81,7 @@ export default function ContactPage() {
             text-indigo-500
           "
           >
-            Contact QuarticCode
+            {t("badge")}
           </span>
 
           <h1
@@ -113,8 +93,8 @@ export default function ContactPage() {
             md:text-7xl
           "
           >
-            Let&apos;s build your{" "}
-            <span className="text-indigo-500">next project</span>
+            {t("titlePrefix")}{" "}
+            <span className="text-indigo-500">{t("titleHighlight")}</span>
           </h1>
 
           <p
@@ -125,8 +105,7 @@ export default function ContactPage() {
             text-muted-foreground
           "
           >
-            Need a website, ERP, eCommerce or custom software solution? Tell us
-            about your idea.
+            {t("subtitle")}
           </p>
         </header>
 
@@ -153,11 +132,11 @@ export default function ContactPage() {
               font-bold
             "
             >
-              Other ways to contact us
+              {t("otherWays")}
             </h2>
 
             <div className="space-y-5 flex flex-col gap-2">
-              {contactMethods.map((item) => {
+              {methods.map((item) => {
                 const Icon = item.icon;
 
                 return (
@@ -217,18 +196,18 @@ export default function ContactPage() {
             "
             >
               <div>
-                <h3 className="font-semibold">Response time</h3>
+                <h3 className="font-semibold">{t("responseTime")}</h3>
 
                 <p className="text-muted-foreground">
-                  Usually within 24 hours.
+                  {t("responseTimeText")}
                 </p>
               </div>
 
               <div>
-                <h3 className="font-semibold">Free estimates?</h3>
+                <h3 className="font-semibold">{t("freeEstimates")}</h3>
 
                 <p className="text-muted-foreground">
-                  Yes, all project estimates are free.
+                  {t("freeEstimatesText")}
                 </p>
               </div>
             </div>
@@ -257,7 +236,7 @@ export default function ContactPage() {
               font-bold
             "
             >
-              Ready to start?
+              {t("ctaTitle")}
             </h2>
 
             <p
@@ -266,8 +245,7 @@ export default function ContactPage() {
               text-muted-foreground
             "
             >
-              Your idea deserves more than a template. Build something scalable
-              with QuarticCode.
+              {t("ctaDescription")}
             </p>
           </CardContent>
         </Card>

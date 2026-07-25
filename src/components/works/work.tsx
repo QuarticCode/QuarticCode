@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "../ui/card";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Props = {
   title: string;
@@ -18,6 +19,8 @@ type Props = {
 };
 
 export default function Work({ title, info, link, img }: Props) {
+  const t = useTranslations("Works");
+
   return (
     <Card className="group overflow-hidden border border-border bg-background/60 backdrop-blur transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       {/* Imagen preview */}
@@ -44,7 +47,7 @@ export default function Work({ title, info, link, img }: Props) {
       <CardContent className="flex justify-between items-center">
         <Link href={link} target="_blank">
           <Button className="flex items-center gap-2">
-            Ver trabajo
+            {t("show")}
             <ArrowUpRight size={16} />
           </Button>
         </Link>

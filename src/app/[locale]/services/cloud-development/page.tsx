@@ -28,8 +28,6 @@ import { useTranslations } from "next-intl";
    Types
 ====================== */
 
-type ServiceKey = 0 | 1 | 2 | 3 | 4;
-
 // Mapeo de iconos por índice
 const serviceIcons: LucideIcon[] = [
   Server, // 0: API Development

@@ -61,7 +61,7 @@ Metadata - Generada dinámicamente
 =================================== */
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("pan-y-chocolate");
+  const t = await getTranslations("Works.pages.pan-y-chocolate");
 
   return {
     title: `${t("title")} POS | QuarticCode`,

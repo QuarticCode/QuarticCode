@@ -9,6 +9,10 @@ export function ProjectsList() {
   const { projects, loading, error } = useProjects();
   const t = useTranslations("Projects.list");
 
+  if(!loading){
+    console.log(projects)
+  }
+
   return (
     <section className="w-full px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center">

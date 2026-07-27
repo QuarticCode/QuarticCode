@@ -26,6 +26,7 @@ import {
   CheckCircle2,
   LucideIcon,
 } from "lucide-react";
+import ScreenshotsCarousel from "@/src/components/works/screenshots-carousel";
 
 // Importa los tipos de iconos
 type FeatureKey = "f1" | "f2" | "f3" | "f4" | "f5" | "f6" | "f7" | "f8" | "f9";
@@ -209,6 +210,10 @@ export default function PanYChocolatePage() {
             ))}
           </div>
         </section>
+
+        {/* GALLERY */}
+
+        <ScreenshotsCarousel />
 
         {/* CTA */}
 

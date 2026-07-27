@@ -51,21 +51,16 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: `${t("title")} ${t("color-title")} | QuarticCode`,
       description: t("description"),
-      url: "https://quarticcode.com/services/web-development",
+      url: "https://quartic-code.com/services/web-development",
       siteName: "QuarticCode",
       type: "website",
     },
 
-    twitter: {
-      card: "summary_large_image",
-      title: `${t("title")} ${t("color-title")} | QuarticCode`,
-      description: t("description"),
-    },
-
     alternates: {
-      canonical: "https://quarticcode.com/services/web-development",
+      canonical: "https://quartic-code.com/services/web-development",
     },
-  };
+  }
+    
 }
 
 /* ===================================

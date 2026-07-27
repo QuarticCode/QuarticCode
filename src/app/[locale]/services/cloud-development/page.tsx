@@ -60,13 +60,13 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
 
     alternates: {
-      canonical: "https://quarticcode.com/services/cloud-infrastructure",
+      canonical: "https://quartic-code.com/services/cloud-infrastructure",
     },
 
     openGraph: {
       title: "Cloud Infrastructure & Business Systems | QuarticCode",
       description: t("description"),
-      url: "https://quarticcode.com/services/cloud-infrastructure",
+      url: "https://quartic-code.com/services/cloud-infrastructure",
       siteName: "QuarticCode",
       type: "website",
     },

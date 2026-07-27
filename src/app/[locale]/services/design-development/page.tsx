@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://quarticcode.com/services/design",
+    canonical: "https://quartic-code.com/services/design",
   },
 
   openGraph: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
     description: "Brand identity, UI/UX and visual design solutions.",
 
-    url: "https://quarticcode.com/services/design",
+    url: "https://quartic-code.com/services/design",
 
     siteName: "QuarticCode",
 

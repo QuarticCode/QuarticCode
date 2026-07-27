@@ -18,12 +18,12 @@ export async function generateMetadata({
     title: t("metadata.title"),
     description: t("metadata.description"),
     alternates: {
-      canonical: "https://quarticcode.com/contact",
+      canonical: "https://quartic-code.com/contact",
     },
     openGraph: {
       title: t("metadata.title"),
       description: t("metadata.description"),
-      url: "https://quarticcode.com/contact",
+      url: "https://quartic-code.com/contact",
       siteName: "QuarticCode",
       type: "website",
     },

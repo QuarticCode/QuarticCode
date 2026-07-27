@@ -65,13 +65,13 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
 
     alternates: {
-      canonical: "https://quarticcode.com/services/mobile-development",
+      canonical: "https://quartic-code.com/services/mobile-development",
     },
 
     openGraph: {
       title: `Mobile App Development | QuarticCode`,
       description: t("description"),
-      url: "https://quarticcode.com/services/mobile-development",
+      url: "https://quartic-code.com/services/mobile-development",
       siteName: "QuarticCode",
       type: "website",
     },

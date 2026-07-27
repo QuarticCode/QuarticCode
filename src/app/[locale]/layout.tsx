@@ -54,11 +54,24 @@ export async function generateMetadata({
     openGraph: {
       title: "QuarticCode | Modern Web Development Agency",
       description:
-        "Scalable web applications, modern mobile apps, cloud solutions, and high-performance digital products.",
+        "Web development, online stores, mobile apps, POS systems, cloud servers and AI infrastructure for businesses in Cuba and Latin America.",
       url: "https://quartic-code.com",
       siteName: "QuarticCode",
-      locale: "en_US",
+      locale: locale === "es" ? "es_ES" : "en_US",
       type: "website",
+      images: [
+        {
+          url: "/logo.svg",
+          alt: "QuarticCode logo",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: "QuarticCode | Modern Web Development Agency",
+      description:
+        "Web development, online stores, mobile apps, POS systems, cloud servers and AI infrastructure for businesses in Cuba and Latin America.",
     },
 
     robots: {

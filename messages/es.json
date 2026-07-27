@@ -1,18 +1,18 @@
 {
   "Metadata": {
     "name": "QuarticCode",
-    "default": "QuarticCode | Agencia de desarrollo web moderno",
-    "description": "QuarticCode es una moderna agencia de desarrollo de software enfocada en aplicaciones web escalables, aplicaciones móviles, infraestructura en la nube y soluciones digitales de alto rendimiento.",
+    "default": "QuarticCode | Desarrolladores web en Cuba",
+    "description": "QuarticCode es una agencia cubana especializada en sitios web, tiendas virtuales, apps móviles, POS, servidores en la nube y soluciones de IA para negocios.",
     "keywords": {
-      "k1": "desarrollo web",
-      "k2": "agencia next.js",
-      "k3": "desarrollo de software",
-      "k4": "desarrollador de react",
-      "k5": "desarrollador de aplicaciones moviles",
-      "k6": "infraestructura en la nube",
-      "k7": "aplicaciones web personalizadas",
-      "k8": "diseño UI UX",
-      "k9": "desarrollo con typescript",
+      "k1": "desarrolladores web en Cuba",
+      "k2": "desarrollo web",
+      "k3": "tiendas virtuales",
+      "k4": "aplicaciones móviles",
+      "k5": "POS móvil",
+      "k6": "servidores",
+      "k7": "servidores de IA",
+      "k8": "desarrollo de software",
+      "k9": "sistemas ERP",
       "k10": "quarticcode"
     }
   },

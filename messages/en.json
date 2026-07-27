@@ -1,18 +1,18 @@
 {
   "Metadata": {
     "name": "QuarticCode",
-    "default": "QuarticCode | Modern Web Development Agency",
-    "description": "QuarticCode is a modern software development agency focused on scalable web applications, mobile apps, cloud infrastructure, and high-performance digital solutions.",
+    "default": "QuarticCode | Cuban Web Development & AI Servers",
+    "description": "QuarticCode is a Cuban web development agency creating websites, online stores, mobile apps, POS solutions, cloud servers and AI infrastructure for businesses.",
     "keywords": {
       "k1": "web development",
-      "k2": "next.js agency",
-      "k3": "software development",
-      "k4": "react development",
-      "k5": "mobile app development",
-      "k6": "cloud infrastructure",
-      "k7": "custom web applications",
-      "k8": "UI UX design",
-      "k9": "typescript development",
+      "k2": "Cuban web developers",
+      "k3": "online stores",
+      "k4": "mobile apps",
+      "k5": "POS systems",
+      "k6": "cloud servers",
+      "k7": "AI servers",
+      "k8": "custom websites",
+      "k9": "ecommerce development",
       "k10": "quarticcode"
     }
   },

@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <main className="py-20 text-foreground font-sans md:mt-32 mt-24 px-16">
+    <main className="py-20 text-foreground font-sans md:mt-32 mt-24 md:px-16 px-2">
       <Image
         src={post.cover}
         alt={post.title}

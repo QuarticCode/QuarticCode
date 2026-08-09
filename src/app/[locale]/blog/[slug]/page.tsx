@@ -47,13 +47,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <main className="py-20 text-foreground font-sans md:mt-32 mt-24 md:px-16 px-2">
+    <main className="py-20 text-foreground font-sans md:mt-32 mt-24 md:px-16 px-2 w-screen">
       <Image
         src={post.cover}
         alt={post.title}
-        width={300}
-        height={400}
-        className="rounded-lg mb-8"
+        width={1200}
+        height={800}
+        className="w-full md:w-125 lg:w-200 h-auto"
       />
       <article>
         {/* Header */}
@@ -79,9 +79,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {post.tags && (
             <div className="mt-6 flex flex-wrap gap-2">
-              {post.tags.map((tag: string) => (
+              {post.tags.map((tag: string, i) => (
                 <span
-                  key={tag}
+                  key={i}
                   className="rounded-full bg-muted px-3 py-1 text-sm"
                 >
                   #{tag}

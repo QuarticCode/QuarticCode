@@ -19,7 +19,7 @@ export default function LocaleTrigger({
     <DropdownMenuTrigger asChild>
       <Button
         variant="outline"
-        className="h-9 gap-2 pl-2.5 pr-3 relative"
+        className="relative h-9 w-full justify-between gap-2 rounded-full border-border/70 bg-transparent pl-2.5 pr-3 md:w-auto"
         disabled={isPending}
       >
         <div className="flex items-center gap-2">

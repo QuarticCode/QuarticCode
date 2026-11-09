@@ -98,7 +98,7 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-zinc-50 dark:bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
         suppressHydrationWarning
       >
         <Provider>

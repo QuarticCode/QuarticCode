@@ -21,8 +21,12 @@ export function SheetMenu({ child }: Props) {
   return (
     <Sheet>
       <SheetTrigger asChild className="md:hidden flex">
-        <Button variant="outline">
-          <Menu />
+        <Button
+          variant="outline"
+          size="icon"
+          className="size-9 rounded-full border-border/70 bg-transparent"
+        >
+          <Menu className="h-[1.1rem] w-[1.1rem]" />
         </Button>
       </SheetTrigger>
       <SheetContent>

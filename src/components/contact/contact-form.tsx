@@ -22,30 +22,30 @@ export default function ContactForm() {
     email: "",
     info: "",
   });
+  const [nameError, setNameError] = useState<string | null>(null);
   const t = useTranslations("Contact");
 
   const adminPhone: string = "+5355153703";
 
-  // Manejador de cambios en inputs de texto
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "fullName" && value.trim()) {
+      setNameError(null);
+    }
   };
 
-  // Función para enviar a WhatsApp
   const handleSendToWhatsApp = () => {
-    // Validaciones
     if (!formData.fullName.trim()) {
-      toast.error("Error", {
-        description: t("toast.error"),
-        className: "bg-slate-900",
-      });
+      setNameError(t("toast.error"));
       return;
     }
 
-    // Construir el mensaje
+    setNameError(null);
+
     let message = `${t("messages.title")}\n\n`;
     message += `👤 *${t("form.fullname")}:* ${formData.fullName}\n`;
 
@@ -59,11 +59,9 @@ export default function ContactForm() {
       message += `📝 ${t("messages.info_null")}`;
     }
 
-    // Codificar URL
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${adminPhone}?text=${encodedMessage}`;
 
-    // Abrir en nueva pestaña
     window.open(whatsappUrl, "_blank");
 
     toast.success(t("messages.redirect"), {
@@ -72,38 +70,51 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex items-center justify-center p-4 md:w-150 w-full">
-      <Card className="w-full max-w-lg shadow-lg">
-        <CardHeader className="text-center space-y-2">
-          <CardTitle className="md:text-2xl text-xl font-bold text-slate-800 dark:text-slate-300">
+    <div className="w-full">
+      <Card className="w-full overflow-hidden rounded-3xl border-border bg-surface py-0 shadow-xl shadow-black/5">
+        <CardHeader className="space-y-2 px-6 pt-7 sm:px-8">
+          <CardTitle className="text-2xl font-semibold tracking-tight">
             {t("form.title")}
           </CardTitle>
-          <CardDescription className="text-md text-slate-500 dark:text-white">
+          <CardDescription className="text-base text-muted-foreground">
             {t("form.description")}
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="space-y-6">
-          {/* Nombre Completo */}
+        <CardContent className="space-y-5 px-6 pb-7 sm:px-8">
           <div className="space-y-2">
             <Label htmlFor="fullName">
-              Nombre Completo <span className="text-red-500">*</span>
+              {t("form.fullname")}{" "}
+              <span className="text-destructive" aria-hidden="true">
+                *
+              </span>
             </Label>
             <Input
               id="fullName"
               name="fullName"
-              placeholder="Ej. Juan Pérez"
+              autoComplete="name"
               value={formData.fullName}
               onChange={handleChange}
-              className="focus-visible:ring-green-500"
+              required
+              aria-invalid={Boolean(nameError)}
+              aria-describedby={nameError ? "fullName-error" : undefined}
+              className="h-11 rounded-xl border-border bg-background px-3.5 focus-visible:border-brand focus-visible:ring-2 focus-visible:ring-brand/20 dark:bg-background"
             />
+            {nameError && (
+              <p
+                id="fullName-error"
+                role="alert"
+                className="text-sm text-destructive"
+              >
+                {nameError}
+              </p>
+            )}
           </div>
 
-          {/* Correo Electrónico */}
           <div className="space-y-2">
             <Label htmlFor="email">
               {t("form.email")}{" "}
-              <span className="text-slate-400 text-sm font-normal">
+              <span className="text-sm font-normal text-muted-foreground">
                 ({t("form.opcional")})
               </span>
             </Label>
@@ -111,14 +122,13 @@ export default function ContactForm() {
               id="email"
               name="email"
               type="email"
-              placeholder="Ej. juan@ejemplo.com"
+              autoComplete="email"
               value={formData.email}
               onChange={handleChange}
-              className="focus-visible:ring-green-500"
+              className="h-11 rounded-xl border-border bg-background px-3.5 focus-visible:border-brand focus-visible:ring-2 focus-visible:ring-brand/20 dark:bg-background"
             />
           </div>
 
-          {/* Información Adicional */}
           <div className="space-y-2">
             <Label htmlFor="info">{t("form.info")}</Label>
             <Textarea
@@ -127,16 +137,15 @@ export default function ContactForm() {
               placeholder={t("form.info_placeholder")}
               value={formData.info}
               onChange={handleChange}
-              className="md:min-h-25 min-h-16 focus-visible:ring-green-500 resize-none"
+              className="min-h-28 resize-none rounded-xl border-border bg-background px-3.5 py-3 focus-visible:border-brand focus-visible:ring-2 focus-visible:ring-brand/20 dark:bg-background"
             />
           </div>
 
-          {/* Botón de Enviar */}
           <Button
             onClick={handleSendToWhatsApp}
-            className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold h-12 text-lg"
+            className="h-12 w-full rounded-xl bg-emerald-600 text-base font-semibold text-white transition-[transform,box-shadow] hover:bg-emerald-500 focus-visible:ring-emerald-500/40 active:scale-[0.99]"
           >
-            <MessageCircle className="mr-2 h-5 w-5" />
+            <MessageCircle className="mr-1 h-5 w-5" />
             {t("form.send")}
           </Button>
         </CardContent>

@@ -3,26 +3,33 @@ import LocaleSwitcher from "../locale-switcher/locale-switcher";
 import { Button } from "../ui/button";
 import { Link } from "@/src/i18n/navigation";
 
+const links = [
+  { href: "/", key: "home" },
+  { href: "/services", key: "services" },
+  { href: "/works", key: "work" },
+  { href: "/blog", key: null },
+  { href: "/contact", key: "contact" },
+] as const;
+
 export function NavbarItems() {
   const t = useTranslations("Navbar");
+
   return (
-    <section className="flex md:flex-row flex-col md:justify-evenly md:items-center justify-center items-start md:p-0 p-8 gap-4">
-      <Link href={"/"}>
-        <Button variant="ghost">{t("home")}</Button>
-      </Link>
-      <Link href={"/services"}>
-        <Button variant="ghost">{t("services")}</Button>
-      </Link>
-      <Link href={"/works"}>
-        <Button variant="ghost">{t("work")}</Button>
-      </Link>
-      <Link href={"/blog"}>
-        <Button variant="ghost">Blog</Button>
-      </Link>
-      <Link href={"/contact"}>
-        <Button variant="ghost">{t("contact")}</Button>
-      </Link>
-      <LocaleSwitcher />
+    <section className="flex flex-col items-stretch gap-1 p-1 md:flex-row md:items-center md:gap-0.5 md:p-0">
+      {links.map((link) => (
+        <Button
+          key={link.href}
+          asChild
+          variant="ghost"
+          size="sm"
+          className="justify-start rounded-full px-3.5 text-[0.9rem] font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground md:justify-center"
+        >
+          <Link href={link.href}>{link.key ? t(link.key) : "Blog"}</Link>
+        </Button>
+      ))}
+      <div className="mt-2 md:mt-0 md:ml-2">
+        <LocaleSwitcher />
+      </div>
     </section>
   );
 }

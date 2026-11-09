@@ -1,47 +1,81 @@
 "use client";
+
 import { useTranslations } from "next-intl";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/src/i18n/navigation";
 
 export function ProjectContainer() {
   const t = useTranslations("Projects.container");
+  const tp = useTranslations("Projects");
+
+  const projects = [
+    { title: tp("p1.title"), meta: "Web" },
+    { title: tp("p2.title"), meta: "App" },
+    { title: tp("p3.title"), meta: "Tool" },
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
-      <section
-        className="flex lg:flex-row flex-col lg:w-4xl md:w-2xl w-screen gap-8 my-16 px-4"
-        id="projects"
-      >
-        <Card className="flex flex-col gap-4 border-2 w-full bg-linear-to-br from-purple-500/20 via-purple-500/40 to-blue-500/30">
-          <CardHeader>
-            <CardTitle className="text-4xl">{t("title")}</CardTitle>
-            <CardDescription className="text-lg">
-              {t("description")}
-            </CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Link href={"/projects"}>
-            <Button size="lg" className="group text-base px-8 h-12">
-              {t("link")} 
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            </Link>
-          </CardFooter>
-        </Card>
-      </section>
-    </motion.div>
+    <section id="projects" className="section">
+      <div className="container-page">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="surface-panel relative overflow-hidden p-8 sm:p-12 lg:p-14"
+        >
+          <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-brand/10 blur-3xl" />
+
+          <div className="relative grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
+            <div>
+              <span className="eyebrow">04 — {t("badge")}</span>
+              <h2 className="mt-4 max-w-2xl text-balance text-3xl font-semibold tracking-[-0.04em] sm:text-4xl lg:text-5xl">
+                {t("title")}
+              </h2>
+              <p className="mt-5 max-w-[65ch] text-pretty leading-relaxed text-muted-foreground">
+                {t("description")}
+              </p>
+
+              <Button
+                asChild
+                size="lg"
+                className="group mt-8 h-12 rounded-full bg-brand px-7 text-base font-semibold text-brand-foreground hover:bg-brand/90"
+              >
+                <Link href="/projects">
+                  {t("link")}
+                  <ArrowUpRight className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="relative hidden lg:block">
+              <div className="rounded-2xl border border-border bg-background/70 p-2 backdrop-blur">
+                {projects.map((project, index) => (
+                  <div
+                    key={project.title}
+                    className="flex items-center justify-between gap-4 rounded-xl px-4 py-3.5 transition-colors hover:bg-surface-2"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="font-mono text-xs text-muted-foreground/60">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-sm font-medium">
+                        {project.title}
+                      </span>
+                    </div>
+                    <span className="rounded-full border border-border px-2 py-0.5 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-muted-foreground">
+                      {project.meta}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl border border-border/60" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }

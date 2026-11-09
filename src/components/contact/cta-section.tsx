@@ -1,44 +1,47 @@
-// src/components/contact/cta-section.tsx
 "use client";
 
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { ContactDialog } from "./contact-dialog";
-import Background from "../icons/background";
 import { useTranslations } from "next-intl";
 
 export function CtaSection() {
-  const t = useTranslations("Services.cta"); // Para traducciones específicas de esta sección
+  const t = useTranslations("Services.cta");
 
   return (
-    <section className="py-20 relative bg-secondary/50 border-y border-border">
-      <Background
-        className="top-0 left-0 w-full h-full blur-3xl absolute -z-1"
-        colorLeft="#4333d8"
-        colorRight="#3245FF"
-      />
-      <div className="container mx-auto px-4 text-center">
+    <section className="pb-24">
+      <div className="container-page">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="relative overflow-hidden rounded-3xl border border-border bg-surface p-8 sm:p-12 lg:p-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-foreground">
-            {t("title")}
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            {t("description")}
-          </p>
+          <div className="absolute -right-20 -top-20 size-72 rounded-full bg-brand/10 blur-3xl" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent" />
 
-          {/* Envolver el botón en el Dialog Trigger */}
-          <ContactDialog>
-            <Button size="lg" className="group text-base px-8 h-12">
-              {t("link")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </ContactDialog>
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <h2 className="max-w-2xl text-balance text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+                {t("title")}
+              </h2>
+              <p className="mt-4 max-w-[60ch] text-pretty leading-relaxed text-muted-foreground">
+                {t("description")}
+              </p>
+            </div>
+
+            <ContactDialog>
+              <Button
+                size="lg"
+                className="group h-12 rounded-full bg-brand px-7 text-base font-semibold text-brand-foreground hover:bg-brand/90"
+              >
+                {t("link")}
+                <ArrowUpRight className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </Button>
+            </ContactDialog>
+          </div>
         </motion.div>
       </div>
     </section>

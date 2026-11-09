@@ -41,6 +41,7 @@
   },
   "Home": {
     "Hero": {
+      "badge": "Estudio digital · Cuba / LATAM",
       "title": "Desarrollo web a medida",
       "subtitle": "Desarrollamos plataformas Next.js de alto rendimiento, optimizadas para SEO, velocidad y escalabilidad.",
       "morphoText": {
@@ -56,6 +57,7 @@
     }
   },
   "Services": {
+    "badge": "Nuestros servicios",
     "title": "Servicios",
     "description": "Explore nuestros servicios y encontrará de todo, desde desarrollo web y móvil hasta infraestructura en la nube y diseño de alto impacto. Adaptándonos a su producto digital.",
     "s1": {
@@ -316,6 +318,7 @@
   },
   "Projects": {
     "container": {
+      "badge": "Portafolio",
       "title": "¿Proyectos Creados?",
       "description": "En nuestro portafolio de proyectos creados, podrá revisar el tangible resultado de años de experiencia trabajando como un equipo cohesionado de programadores. No solo construimos software; entregamos productos robustos, escalables y de alta calidad que han resuelto problemas reales para nuestros clientes.",
       "link": "Ver proyectos"
@@ -343,6 +346,7 @@
     }
   },
   "Contact": {
+    "badge": "Contacto",
     "title": "Contáctanos",
     "form": {
       "title": "Solicitar Presupuesto",

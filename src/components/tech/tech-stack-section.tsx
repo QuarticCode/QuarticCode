@@ -18,7 +18,6 @@ import {
   SiExpo,
   SiFigma,
 } from "react-icons/si";
-import { Card, CardContent } from "../ui/card";
 import { useTranslations } from "next-intl";
 
 type TechItem = {
@@ -71,7 +70,7 @@ const techStack: TechCategory[] = [
   },
   {
     title: "s6",
-    items: [{ name: "Figma", icon: SiFigma }]
+    items: [{ name: "Figma", icon: SiFigma }],
   },
 ];
 
@@ -79,86 +78,66 @@ export default function TechStackSection() {
   const t = useTranslations("Tech");
 
   return (
-    <section className="relative overflow-hidden py-24">
-
-      {/* Glow */}
-      <div className="absolute left-1/2 top-0 -z-10 h-100 w-100 -translate-x-1/2 rounded-full bg-indigo-500/10 blur-3xl" />
-
-      <div className="container mx-auto px-4 md:px-6">
-        {/* Header */}
+    <section className="section relative border-y border-border bg-surface-2/40">
+      <div className="container-page">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mx-auto mb-16 max-w-3xl text-center"
+          className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end"
         >
-          <span className="mb-4 inline-flex rounded-full border border-indigo-500/20 bg-indigo-500/10 px-4 py-1 text-sm font-medium text-indigo-400">
-            {t("badge")}
-          </span>
-
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            {t("title")}
-          </h2>
-
-          <p className="mt-6 text-lg text-muted-foreground">
+          <div>
+            <span className="eyebrow">02 — {t("badge")}</span>
+            <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
+              {t("title")}
+            </h2>
+          </div>
+          <p className="max-w-[52ch] text-pretty leading-relaxed text-muted-foreground lg:justify-self-end">
             {t("description")}
           </p>
         </motion.div>
 
-        {/* Categories */}
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {techStack.map((category, categoryIndex) => (
-              <Card className="group h-full border-border/50 bg-background/60 backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.08)]">
-                <CardContent className="p-6">
-                  <div className="mb-6 flex items-center justify-between">
-                    <h3 className="text-xl font-semibold">
-                      {t(`Stacks.${category.title}`)}
-                    </h3>
-
-                    <div className="h-px flex-1 bg-linear-to-r from-indigo-500/40 to-transparent ml-4" />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    {category.items.map((tech, index) => {
-                      const Icon = tech.icon;
-
-                      return (
-                        <motion.div
-                          key={tech.name}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{
-                            duration: 0.25,
-                            delay: index * 0.05,
-                          }}
-                          viewport={{ once: true }}
-                          className="flex items-center gap-3 rounded-xl border border-border/40 bg-muted/30 px-4 py-3 transition-all duration-300 hover:border-indigo-500/40 hover:bg-indigo-500/5"
-                        >
-                          <Icon className="h-5 w-5 text-indigo-400" />
-
-                          <span className="text-sm font-medium">
-                            {tech.name}
-                          </span>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </CardContent>
-              </Card>
-          ))}
-        </div>
-
-        {/* Bottom text */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.05 }}
           viewport={{ once: true }}
-          className="mx-auto mt-16 max-w-2xl text-center"
+          className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3"
         >
-          <p className="text-muted-foreground">{t("footer")}</p>
+          {techStack.map((category, index) => (
+            <div key={category.title} className="bg-background p-6 sm:p-7">
+              <div className="flex items-center justify-between gap-4">
+                <h3 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">
+                  {t(`Stacks.${category.title}`)}
+                </h3>
+                <span className="font-mono text-[0.7rem] text-muted-foreground/50">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {category.items.map((tech) => {
+                  const Icon = tech.icon;
+
+                  return (
+                    <li
+                      key={tech.name}
+                      className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-sm transition-colors hover:border-brand/40 hover:bg-brand-soft"
+                    >
+                      <Icon className="h-4 w-4 text-brand" />
+                      <span className="font-medium">{tech.name}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
         </motion.div>
+
+        <p className="mt-8 max-w-[65ch] text-sm leading-relaxed text-muted-foreground">
+          {t("footer")}
+        </p>
       </div>
     </section>
   );

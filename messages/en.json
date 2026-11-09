@@ -41,6 +41,7 @@
   },
   "Home": {
     "Hero": {
+      "badge": "Digital studio · Cuba / LATAM",
       "title": "Custom Web Development",
       "subtitle": "We build high-performance Next.js platforms optimized for SEO, speed and scalability.",
       "morphoText": {
@@ -56,6 +57,7 @@
     }
   },
   "Services": {
+    "badge": "Our services",
     "title": "Services",
     "description": "Explore our services and you will find everything from web and mobile development to cloud infrastructure and high-impact design. Adapting to your digital product.",
     "s1": {
@@ -316,6 +318,7 @@
   },
   "Projects": {
     "container": {
+      "badge": "Portfolio",
       "title": "Projects created?",
       "description": "In our portfolio of completed projects, you can see the tangible result of years of experience working as a cohesive team of programmers. We don't just build software; we deliver robust, scalable, high-quality products that have solved real problems for our clients.",
       "link": "See projects"
@@ -343,6 +346,7 @@
     }
   },
   "Contact": {
+    "badge": "Contact",
     "title": "Contact Us",
     "form": {
       "title": "Request a Quote",

@@ -28,7 +28,7 @@ export function MorphoTextFlip({
 
   const updateWidthForWord = () => {
     if (measureRef.current) {
-      const textWidth = measureRef.current.scrollWidth + 48;
+      const textWidth = measureRef.current.scrollWidth + 16;
       setWidth(`${textWidth}px`);
     }
   };

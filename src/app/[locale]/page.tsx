@@ -9,7 +9,7 @@ import { CtaWorks } from "@/src/components/works/cta-works";
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:mt-32 mt-24 items-center justify-center font-sans md:mr-8 md:ml-8">
+    <main className="flex flex-col overflow-x-hidden">
       <Hero />
 
       <Services />
@@ -25,6 +25,6 @@ export default function Home() {
       <Contact />
 
       <FAQSection />
-    </div>
+    </main>
   );
 }

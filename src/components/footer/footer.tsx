@@ -13,115 +13,121 @@ export function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="bg-white dark:bg-black dark:text-white w-full">
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="col-span-1 lg:col-span-1 space-y-4">
-            <a href="#" className="flex items-center gap-2 group">
+    <footer className="border-t border-border bg-surface-2/40">
+      <div className="container-page py-14 lg:py-18">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="space-y-4">
+            <a href="#" className="flex items-center gap-2.5">
               <Image
-                src={"/logo.svg"}
-                width={80}
-                height={80}
-                alt="logo image"
+                src="/logo.svg"
+                width={36}
+                height={28}
+                className="h-7 w-auto"
+                alt="QuarticCode"
               />
-              <span className="text-xl font-semibold tracking-tight ">
+              <span className="text-base font-semibold tracking-tight">
                 QuarticCode
               </span>
             </a>
-            <p className="text-sm  leading-relaxed max-w-xs">{t("info")}</p>
+            <p className="max-w-[34ch] text-sm leading-relaxed text-muted-foreground">
+              {t("info")}
+            </p>
           </div>
 
-          {/* Contact Section */}
-          <div className="col-span-1 space-y-6">
-            <h3 className="text-sm font-semibold  uppercase tracking-wider">
+          <div className="space-y-5">
+            <h3 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">
               {t("columns.c1.title")}
             </h3>
             <ul className="space-y-4">
-              <li className="group flex items-start gap-3">
-                <div className="mt-1 group-hover:text-[#cc0000] transition-colors">
+              <li className="flex items-start gap-3">
+                <span className="mt-0.5 text-muted-foreground [&>svg]:size-4">
                   <Envelop />
-                </div>
-                <div className="space-y-1">
+                </span>
+                <div className="space-y-0.5">
                   <a
                     href="mailto:quarticcode@gmail.com"
                     target="_blank"
-                    className="text-sm hover:text-[#cc0000] font-medium transition-colors hover-underline-animation"
+                    className="text-sm font-medium text-foreground hover:text-brand"
                   >
                     quarticcode@gmail.com
                   </a>
-                  <p className="text-xs">{t("columns.c1.items.i1.info")}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t("columns.c1.items.i1.info")}
+                  </p>
                 </div>
               </li>
 
-              <li className="group flex items-start gap-3">
-                <div className="mt-1 group-hover:text-[#0088cc] transition-colors">
+              <li className="flex items-start gap-3">
+                <span className="mt-0.5 text-muted-foreground [&>svg]:size-4">
                   <Telegram />
-                </div>
-                <div className="space-y-1">
+                </span>
+                <div className="space-y-0.5">
                   <a
                     href="https://t.me/username"
                     target="_blank"
-                    className="text-sm  hover:text-[#0088cc] font-medium transition-colors hover-underline-animation"
+                    className="text-sm font-medium text-foreground hover:text-brand"
                   >
                     @quartic_code
                   </a>
-                  <p className="text-xs ">{t("columns.c1.items.i2.info")}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t("columns.c1.items.i2.info")}
+                  </p>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Development Section */}
-          <div className="col-span-1 space-y-6">
-            <h3 className="text-sm font-semibold  uppercase tracking-wider">
+          <div className="space-y-5">
+            <h3 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">
               {t("columns.c2.title")}
             </h3>
             <ul className="space-y-4">
-              <li className="group flex items-start gap-3">
-                <div className="mt-1  group-hover:text-black dark:group-hover:text-white transition-colors">
+              <li className="flex items-start gap-3">
+                <span className="mt-0.5 text-muted-foreground [&>svg]:size-4">
                   <Github />
-                </div>
-                <div className="space-y-1">
-                  <a
-                    href="https://github.com/QuarticCode"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm  hover:text-black dark:hover:text-white font-medium transition-colors hover-underline-animation"
-                  >
-                    {t("columns.c2.items.i1.info")}
-                  </a>
-                </div>
+                </span>
+                <a
+                  href="https://github.com/QuarticCode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-foreground hover:text-brand"
+                >
+                  {t("columns.c2.items.i1.info")}
+                </a>
               </li>
 
-              <li className="group flex items-start gap-3">
-                <div className="mt-1  group- transition-colors">
+              <li className="flex items-start gap-3">
+                <span className="mt-0.5 text-muted-foreground [&>svg]:size-4">
                   <Blog />
-                </div>
-                <div className="space-y-1">
-                  <a
-                    href="#"
-                    className="text-sm   font-medium transition-colors hover-underline-animation"
-                  >
-                    {t("columns.c2.items.i2.info")}
-                  </a>
-                </div>
+                </span>
+                <a
+                  href="#"
+                  className="text-sm font-medium text-foreground hover:text-brand"
+                >
+                  {t("columns.c2.items.i2.info")}
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Legal Section */}
-          <div className="col-span-1 space-y-6">
-            <h3 className="text-sm font-semibold uppercase tracking-wider">
+          <div className="space-y-5">
+            <h3 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">
               {t("columns.c3.title")}
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm transition-colors">
+                <a
+                  href="#"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
                   {t("columns.c3.items.i1.info")}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors">
+                <a
+                  href="#"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
                   {t("columns.c3.items.i2.info")}
                 </a>
               </li>
@@ -129,16 +135,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm ">
-            {/* &copy; 2026 QuarticCode. All rights reserved. */}
-            {t("legal")}
-          </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="  transition-colors" aria-label="Twitter">
+        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-muted-foreground">{t("legal")}</p>
+          <div className="flex items-center gap-5">
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="text-muted-foreground hover:text-foreground"
+            >
               <Twitter />
             </a>
-            <a href="#" className="  transition-colors" aria-label="LinkedIn">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              className="text-muted-foreground hover:text-foreground"
+            >
               <LinkedIn />
             </a>
           </div>

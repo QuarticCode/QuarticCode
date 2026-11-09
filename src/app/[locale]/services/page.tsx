@@ -18,7 +18,7 @@ export async function generateMetadata({
 
 export default function Home() {
   return (
-    <main className="md:mt-32 mt-24 min-h-screen">
+    <main className="min-h-screen">
       <ServicesGrid />
 
       <CtaSection />
